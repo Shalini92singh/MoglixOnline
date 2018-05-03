@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite for personal Account user">
+<listeners>
+      <listener class-name="online.utility.com.CustomReporter"/>
+  </listeners>
+<test name="Signup process for personal Account">
+<classes>
+<class name="online.testcases.com.LoginModule">
+<methods>
+<include name="navigateOnSignupPage"></include>
+<include name="verifySingupMandatoryFields"></include>
+<include name="signupWithPersonalAccountInMoglixApp"></include>
+</methods>
+</class>
+</classes>
+</test>
+<test name="Order Proceed with personal account users">
+<classes>
+<class name="online.testcases.com.PlacedOrderd">
+<methods>
+<include name="SelectProduct"></include>
+<include name="OpenCartItem"></include>
+<include name="addShippingAddress"></include>
+<include name="proceedOrdertoPayment"></include>
+</methods>
+</class>
+</classes>
+</test>
+</suite>
