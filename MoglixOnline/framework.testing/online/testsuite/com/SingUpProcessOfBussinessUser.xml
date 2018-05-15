@@ -22,7 +22,7 @@
 <class name="online.testcases.com.PlacedOrderd">
 <methods>
 <include name="SelectProduct"></include>
-<include name="OpenCartItem"></include>
+<include name="AddProductIntoCart"></include>
 <include name="addShippingAddress"></include>
 <include name="addBiillingAddress"></include>
 <include name="proceedOrdertoPayment"></include>

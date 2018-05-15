@@ -7,7 +7,7 @@
   </listeners>
 <test name="Signup process for personal Account">
 <classes>
-<class name="online.testcases.com.LoginModule">
+<class name="online.testcases.com.Personaluseraccount">
 <methods>
 <include name="navigateOnSignupPage"></include>
 <include name="verifySingupMandatoryFields"></include>
@@ -21,7 +21,7 @@
 <class name="online.testcases.com.PlacedOrderd">
 <methods>
 <include name="SelectProduct"></include>
-<include name="OpenCartItem"></include>
+<include name="AddProductIntoCart"></include>
 <include name="addShippingAddress"></include>
 <include name="proceedOrdertoPayment"></include>
 </methods>

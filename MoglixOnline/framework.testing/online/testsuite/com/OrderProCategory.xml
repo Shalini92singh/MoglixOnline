@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite for product order by selction of Category Product">
+<listeners>
+      <listener class-name="online.utility.com.CustomReporter"/>
+  </listeners>
+<test name="Category wise Product order">
+<classes>
+<class name="online.testcases.com.PlacedOrderd">
+<methods>
+<include name="validLogin"></include>
+<include name="OrderCategoryProduct"></include>
+<include name="AddProductIntoCart"></include>
+<include name="addShippingAddress"></include>
+<include name="proceedOrdertoPayment"></include>
+</methods>
+</class>
+</classes>
+</test>
+</suite>

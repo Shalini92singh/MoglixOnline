@@ -27,16 +27,16 @@ public class testing {
 			 
 		
 		      
-		      driver.get("https://www.moglix.com/login");
+		      driver.get("https://moglix.com//login");
 		      
 		      driver.manage().window().maximize(); 
 		      
-		      driver.findElement(By.xpath("//input[starts-with(@formcontrolname,'email')]")).sendKeys("shalu@yopmail.com");
+		      driver.findElement(By.xpath("//input[starts-with(@formcontrolname,'email')]")).sendKeys("test1@yopmail.com");
 		      
 		      driver.findElement(By.xpath("//button[contains(text(),'CONTINUE')]")).click();
 		      Thread.sleep(3000); 
 		      
-		      driver.findElement(By.xpath("//input[starts-with(@formcontrolname,'password')]")).sendKeys("123456789");
+		      driver.findElement(By.xpath("//input[starts-with(@formcontrolname,'password')]")).sendKeys("test@123");
 		      
 		      
 		      driver.findElement(By.xpath("//button[contains(text(),'CONTINUE')]")).click();
@@ -44,7 +44,7 @@ public class testing {
 		      driver.findElement(By.xpath("//img[starts-with(@alt,'Shop for Assortment')]")).click();
 		      
 		      Thread.sleep(3000); 
-		      
+		     
 		     // cm.scrolldown();
 		      driver.findElement(By.xpath("//best-seller//div[@class='owl-stage-outer']//*[@class=\"owl-item active\"][1]")).click();
 		      Thread.sleep(3000); 
@@ -62,16 +62,32 @@ public class testing {
 		      Thread.sleep(3000); 
 		      
 		      driver.findElement(By.xpath("//button[contains(text(),'PROCEED TO PAYMENT')]")).click();
-		      Thread.sleep(3000); 
+		      Thread.sleep(3000);
 		      
+		      try {
+	    		   driver.findElement(By.xpath("//ul[@class='ullist']//li[.='Cash On Delivery']")).isDisplayed();
+	    			driver.findElement(By.xpath("//ul[@class='ullist']//li[.='Cash On Delivery']")).click();            
+	    			
+	    			Thread.sleep(3000);
+	    			
+	    		}catch(Exception e){
+	    			WebElement ele = driver.findElement(By.xpath("//div[contains(text(),'Product out of stock')]"));
+	    		    //  JavascriptExecutor executor = (JavascriptExecutor)driver;
+	    		     // executor.executeScript("arguments[0].click();", ele);
+	    		      String value = ele.getText();
+	    		      System.out.println(value);
+	    		      
+	    		      Thread.sleep(3000);
+	    		}
 		      
+		    /*  
 		      WebElement ele = driver.findElement(By.xpath("//ul[@class='ullist']//li[.='Cash On Delivery']"));
 		      JavascriptExecutor executor = (JavascriptExecutor)driver;
 		      executor.executeScript("arguments[0].click();", ele);
 		      String value = ele.getText();
 		      System.out.println(value);
 		      Thread.sleep(3000); 
-		      
+		      */
 		      
 		     
 		      

@@ -1,5 +1,6 @@
 package online.pom.com;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,9 +21,11 @@ public class ProductPurchasePage extends LoginPage {
 	
 	@FindBy(xpath="//button[contains(text(),' BUY ')]")
 	public static WebElement clk_ByNow_btn;
-		
-	@FindBy(xpath="//span[contains(text(),'Cart')]")
+	
+	
+	@FindBy(xpath="html/body/app/main/pages/ba-page-top/div[1]/header/div[2]/div[4]/ul/li[1]/span[2]")
 	public static WebElement clk_CartIcon;
+	
 	
 	@FindBy(xpath="//button[contains(text(),'CONTINUE SHOPPING')]")
 	public static WebElement clk_ConntinueShopping_btn;
@@ -32,7 +35,7 @@ public class ProductPurchasePage extends LoginPage {
 	
 	//label[contains(text(),'Add Shipping Address')]
 	
-	@FindBy(xpath="//label[contains(text(),'+ Add Shipping Address')]")
+	@FindBy(xpath="//label[contains(text(),'Add Shipping Address')]")
 	public static WebElement clk_addShippingAdd;
 	
 	@FindBy(xpath="//label[contains(text(),'+ Add Billing Address')]")
@@ -60,6 +63,26 @@ public class ProductPurchasePage extends LoginPage {
 	
 	@FindBy(xpath= "//button[contains(text(),'Apply')]")
 	public static WebElement clk_onApply_btn;
+	
+	@FindBy(xpath="//div[contains(text(),'Product out of stock')]")
+	public static WebElement gettext_outofStock;
+	
+	
+	// Product order Category wise
+	
+	@FindBy(xpath="//i[contains(@class,'mar-r-5  icon-electricals')]")
+	public static WebElement clk_electronic_cat;
+	
+	@FindBy(xpath="//button[contains(text(),'Show more')]")
+	public static WebElement clk_showMore_btn;
+	
+	//@FindBy(xpath="//div[contains(@class,'col-xs-6 col-sm-6 col-md-4 col-lg-3')][1]")
+	@FindBy(xpath="//div[contains(@id,'subcCategoryTop')]/div[1]")
+	public static  WebElement clkon_FirstProduct;
+	
+	
+	@FindBy(xpath="//product-list[contains(@class,'block mar-t-10')]/div/div[1]")
+	public static WebElement clkOn_subCategoryProduct;
 	
 	
 	

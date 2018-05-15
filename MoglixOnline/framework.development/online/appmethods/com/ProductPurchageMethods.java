@@ -1,5 +1,7 @@
 package online.appmethods.com;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -26,15 +28,25 @@ public abstract class ProductPurchageMethods extends LoginMethods{
 	}
 	
 	public void clkOnCartIcon() {
-		ProductPurchasePage.clk_CartIcon.click();
+
+	ProductPurchasePage.clk_CartIcon.click();
 	}
 	
 	public void clkOnPlaceOrderbtn() {
 		ProductPurchasePage.clk_PlaceOrder_btn.click();
 	}
 	
-	public void clkOnAddAddresstxt() {
-		ProductPurchasePage.clk_addShippingAdd.click();
+	public void clkOnAddAddresstxt() throws InterruptedException {
+		// System.out.println("Print web element");
+	   ProductPurchasePage.clk_addShippingAdd.click();
+	  
+	/*
+		WebElement ele = driver.findElement(By.xpath("//label[contains(@class,'pull-right blue-label text-500 height-auto text-center-xs')]"));
+	      JavascriptExecutor executor = (JavascriptExecutor)driver;	
+	      executor.executeScript("arguments[0].click();", ele);
+	      ele.click(); 
+	      Thread.sleep(3000);*/
+		
 	}
 	
 	public void clkOnSavebutn() {
@@ -52,6 +64,7 @@ public abstract class ProductPurchageMethods extends LoginMethods{
 	      JavascriptExecutor executor = (JavascriptExecutor)driver;
 	      executor.executeScript("arguments[0].click();", ele);
 	      ele.click();
+	      ele.getText(); 
 	      Thread.sleep(3000);
 
 		
@@ -76,6 +89,59 @@ public abstract class ProductPurchageMethods extends LoginMethods{
 	public void clkonApplybtn() {
 		ProductPurchasePage.clk_onApply_btn.click();
 	}
+	
+	public void gettextOutofStock() {
+	
+		WebElement ele = driver.findElement(By.xpath("//div[contains(text(),'Product out of stock')]"));
+	    //  JavascriptExecutor executor = (JavascriptExecutor)driver;
+	     // executor.executeScript("arguments[0].click();", ele);
+	      String value = ele.getText();
+	      System.out.println(value);
+	}
+	
+	public void clkOnViewAllCategory() throws InterruptedException{
+	
+		/* Actions action = new Actions(driver);
+		WebElement ele = driver.findElement(By.xpath("//span[contains(@class,'icon_font icon-electricals')]"));
+		action.doubleClick(ele);
+		action.perform();
+		Thread.sleep(3000);*/
+		
+		Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.xpath("//a[contains(@class,'dropdown-toggle text-red block lh-25')]"))).doubleClick().build().perform();
+        try{
+            Thread.sleep(10000);
+        }
+        catch(InterruptedException ex){
+            ex.printStackTrace();
+        }
+		
+		
 
+	}
+	
+	public void clkonFirstProduct() {
+		ProductPurchasePage.clkon_FirstProduct.click();
+	
+	}
+	
+	
+	public void clkonSubCategoryPro() throws InterruptedException {
+		
+		WebElement ele = driver.findElement(By.xpath("//product-list[contains(@class,'block mar-t-10')]/div/div[1]"));
+	      JavascriptExecutor executor = (JavascriptExecutor)driver;
+	      executor.executeScript("arguments[0].click();", ele);
+	      ele.click();
+	      Thread.sleep(3000);
+	//	ProductPurchasePage.clkOn_subCategoryProduct.click();
+	}
+	
+	public void clkOnMorebtn() {
+		ProductPurchasePage.clk_showMore_btn.click();
+	}
+
+	public void clkOnElectronicCategory() {
+		ProductPurchasePage.clk_electronic_cat.click();
+	}
 
 }

@@ -15,17 +15,18 @@ import online.utility.com.LoginExcel;
 
 
 
-   public class LoginModule extends LoginMethods{
+   public class Personaluseraccount extends LoginMethods{
 	
 	/***********************************************
 	 * @author Shalini Singh
 	 * Test Case Objective : To navigate sign up page
 	 * Note:- MailId should not exist in database 
 	 * @throws IOException 
+	 * @throws InterruptedException 
 	   
 	 *************************************************/
 	@Test(dataProvider = "signup", dataProviderClass = LoginExcel.class , enabled= true)
-	public void navigateOnSignupPage(String emailAddress) throws IOException {
+	public void navigateOnSignupPage(String emailAddress) throws IOException, InterruptedException {
 		
 		common.ImplicityWait(10);
 		
@@ -36,13 +37,16 @@ import online.utility.com.LoginExcel;
 		Log.info("Enter emailAddress");
 		enterEmailAdd(emailAddress);
 		Log.info("Entred Username is: " +emailAddress);
+		Thread.sleep(3000);
+		common.TakeScreenshots("signup");
 		
 		Log.info("Click on Continue buttton");
 		clkContinuebtn();
 		Log.info("Sign Up page found");
+		Thread.sleep(3000);
 		
 		
-		common.TakeScreenshots("signup");
+		
 		 Log.endTestCase("Test Case End");
 		
 	}
@@ -51,13 +55,14 @@ import online.utility.com.LoginExcel;
 	 * @author Shalini Singh
 	 * Test Case Objective : Verify mandatory fields
 	 * @throws IOException 
+	 * @throws InterruptedException 
 	   
 	 *************************************************/
 	
 	  @Test(dependsOnMethods= "navigateOnSignupPage", enabled= true)
-      public void verifySingupMandatoryFields() throws IOException {
+      public void verifySingupMandatoryFields() throws IOException, InterruptedException {
 		  
-		common.ImplicityWait(10);
+		common.ImplicityWait(20);
 			
 		DOMConfigurator.configure("log.xml");
 		Log.startTestCase("TC_Login_02"); 
@@ -65,6 +70,7 @@ import online.utility.com.LoginExcel;
 		
 		Log.info("Validate personal account button is enabled");
 		Assert.assertFalse(LoginPage.clk_personalAccount_btn.isEnabled(), "Failed: Field Found Enabled");
+		Thread.sleep(3000);
 		
 		common.TakeScreenshots("ManadatoryFields");
 		 Log.endTestCase("Test Case End");
@@ -75,40 +81,45 @@ import online.utility.com.LoginExcel;
 		 * @author Shalini Singh
 		 * Test Case Objective : Signup with personal account
 		 * @throws IOException 
+	 * @throws InterruptedException 
 		   
 		 *************************************************/
 	  
 	  
 	  @Test(dependsOnMethods= "verifySingupMandatoryFields", dataProvider = "PersonalAccount", dataProviderClass = LoginExcel.class, enabled= true )
-	  public void signupWithPersonalAccountInMoglixApp(String password, String mobileNumber, String name ) throws IOException {
+	  public void signupWithPersonalAccountInMoglixApp(String password, String mobileNumber, String name ) throws IOException, InterruptedException {
 		  
-		  common.ImplicityWait(10);
+		  common.ImplicityWait(20);
 			
 			DOMConfigurator.configure("log.xml");
 			Log.startTestCase("TC_Login_03");
 				
-			Log.info("Enter password");
+		
 		    enterPassword(password);
+		    Log.info("Enter password: " +password);
 		    Log.info("Click on personal account button");
 		    
-			Log.info("Enter mobile number");
+			
 			enterMobileNo(mobileNumber);
+			Log.info("Enter mobile number: " +mobileNumber);
 			Assert.assertTrue(LoginPage.enter_mobileNumber.isDisplayed(), "Faield: Mobile number field is not found");
 		    Log.endTestCase("Test Case End");
+		    Thread.sleep(3000);
 		    
-		    Log.info("Enter Name");
+		   
 		    enterName(name);
 		    Assert.assertTrue(LoginPage.enter_name.isDisplayed(), "Faield: Name field is not found");
-		     
-		    clkPersonalAccountbtn();
+		    Log.info("Enter Name: "+name);
 		    
+		    clkPersonalAccountbtn();
+		    Thread.sleep(3000);
 		    Log.info("Account has been created");
 		    
 		    common.TakeScreenshots("UserDashboard");
 		    
 		    clkhomebtn();
 		    common.TakeScreenshots("HomePage");
-			
+		    Thread.sleep(3000);
 		    Log.endTestCase("Test Case End");
 	  }
 	  

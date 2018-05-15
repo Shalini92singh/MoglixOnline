@@ -4,11 +4,14 @@ import java.io.IOException;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import online.appmethods.com.ProductPurchageMethods;
+import online.common.com.CommonMethods;
 import online.pom.com.LoginPage;
+import online.pom.com.ProductPurchasePage;
 import online.utility.com.Log;
 import online.utility.com.LoginExcel;
 import online.utility.com.ProductPurchaseExcel;
@@ -26,9 +29,11 @@ public class PlacedOrderd extends ProductPurchageMethods {
 	 *******************************************************/
 	
 	    public static WebElement element = null;
+	    
+	    CommonMethods cm= new CommonMethods();
 	
 	
-	    @Test (dataProvider = "Login", dataProviderClass = LoginExcel.class, enabled= false, priority= 1)
+	    @Test (dataProvider = "Login", dataProviderClass = LoginExcel.class)
 	    public void validLogin(String emailAddress, String password) throws IOException, InterruptedException{
 		
 	    common.ImplicityWait(10);
@@ -54,11 +59,13 @@ public class PlacedOrderd extends ProductPurchageMethods {
         clkhomebtn();
         Thread.sleep(3000);
 	    
+        common.TakeScreenshots("LoginInAppScreen");
 	    Log.endTestCase("Test Case End");
 	    
+	   
 	}
-        @Test(enabled= true,priority= 2)
-        public void SelectProduct() throws InterruptedException {
+        @Test()
+        public void SelectProduct() throws InterruptedException, IOException {
         	
            common.ImplicityWait(10);
     		
@@ -72,39 +79,57 @@ public class PlacedOrderd extends ProductPurchageMethods {
     		clkOnproductnametext();
     		Log.info("Click on product Title");
     		Thread.sleep(3000);
-    		
+    		common.TakeScreenshots("ProductNameScreen");
     	//	common.scrolldown();
-    		
-    		clkOnAddtoCartbtn();
-    		Log.info("Click on Add to Cart");
-    		Thread.sleep(3000);
-    		
-    			
+    		Log.endTestCase("Test Case End");
+    	    
         }
     		
-       @Test(enabled= true,priority= 3)
-      public void OpenCartItem() throws InterruptedException {
+       @Test()
+      public void AddProductIntoCart() throws InterruptedException, IOException {
     			 
     	    common.ImplicityWait(10);
     	    		
     	    DOMConfigurator.configure("log.xml");
     	    Log.startTestCase("OpenCartItam");
-    	    
-    	    common.scrollup();
     	    Thread.sleep(3000);
-    		
-    		clkOnCartIcon();
-    		Log.info("Click on Cart");
-    		Thread.sleep(3000);
-    		
-    		clkOnPlaceOrderbtn();
-    		Log.info("Click on place order");
-    		common.ExplicityWait(30);
+    	    
+    	    if (driver.findElements(By.xpath("//button[contains(text(),'ADD TO ')]")).size() != 0) {
+    	    	
+    	    	Log.info("Click on Add to Cart");
+    	    	clkOnAddtoCartbtn();
+        		//Assert.assertTrue(ProductPurchasePage.clk_CartIcon.isDisplayed(), "Failed: Element is not found");
+        		common.ExplicityWait(10);
+        		
+        		Log.info("Click on Cart Icon");
+        	    clkOnCartIcon();
+        		Thread.sleep(3000);
+     
+        	    common.scrollup();
+        	    Thread.sleep(3000);
+        	
+        		clkOnPlaceOrderbtn();
+        		Log.info("Click on place order");
+        		//common.ExplicityWait(10);
+        		
+        		common.TakeScreenshots("AddCardDetailspage");
+        		Log.endTestCase("Test Case End");
+        		
+    	    } else{
+    	    	
+    	    	Log.info("Add to Cart button not found due to product is out of stock");
+    	    	common.TakeScreenshots("outOfStockProduct");
+        		Thread.sleep(3000);	
+        		
+        		
+    	    }
+    	    
+    	    Log.endTestCase("Test Case End");
     		
        }
     		
-    	 @Test(dataProvider = "Adress",dataProviderClass= ProductPurchaseExcel.class, enabled= true,priority= 4)
-    	 public void addShippingAddress(String pin, String addressLine) throws InterruptedException {
+    	 @Test(dataProvider = "Adress",dataProviderClass= ProductPurchaseExcel.class)
+    	 public void addShippingAddress(String pin, String addressLine) throws InterruptedException, IOException {
     	     			 
     	common.ImplicityWait(10);
 	    		
@@ -112,44 +137,47 @@ public class PlacedOrderd extends ProductPurchageMethods {
     	Log.startTestCase("Add Address");  
     	
     	//element = null;
-    	
+    	Thread.sleep(6000);
     	try {
-    	   element = driver.findElement(By.xpath("//label[contains(text(),'+ Add Shipping Address')]"));
-    			   Log.info("Add Address button found");
+    	 // element = driver.findElement(By.xpath("//label[contains(text(),'+ Add Shipping Address')]"));
+    			  // Log.info("Add Address button found");
     			   clkOnAddAddresstxt();
-    			  // Thread.sleep(3000);
-    			   common.ExplicityWait(20);
+    			   
+    			   Thread.sleep(6000);
+    			//   common.ExplicityWait(20);
     			   
     	}catch(Exception e) {
-    		Log.error("Add Address button not found");
+    		Log.error("Add Shipping Address button not found");
     		Thread.sleep(3000);
+    		//common.ExplicityWait(20);
     		
-    	}finally {
+    	}finally{
     		
     		enterPinNo(pin);
     		Log.info("Enter Pin Code : " +pin );
       		Thread.sleep(3000);
     		
-    	}
-  		
-    	
+    	}	
   		enterRegisterAdd(addressLine);
   		Log.info("Enter Address Name : " +addressLine );
   		Thread.sleep(3000);
   		
+  		common.TakeScreenshots("ShippingAddressPage");	
+  		
   		clkOnSavebutn();
-  		Thread.sleep(3000); 	    
-    		
-    		
+  		Thread.sleep(3000); 
+  
+  		Log.endTestCase("Test Case End");
     	 }
     	 
-    	@Test(enabled= true,priority= 6)
-       	 public void proceedOrdertoPayment() throws InterruptedException {   		
+    	 
+    	@Test()
+       	 public void proceedOrdertoPayment() throws InterruptedException, IOException {   		
     	
     		
       	  DOMConfigurator.configure("log.xml");
       	  Log.startTestCase("Proceed COD Order to Payment "); 
-    		
+    		 
     		
     		clkContinuebtn();
     		Log.info("Click on Continue button");
@@ -157,19 +185,37 @@ public class PlacedOrderd extends ProductPurchageMethods {
     		
     		clk_proceedtoPay();
     		Log.info("Click on proceed to payment");
+    		Thread.sleep(6000);
     		
-    		Thread.sleep(3000);
- 
-    		clkOnCashOnDliverytab();
-    		Log.info("Click on cash on delivery Tab");
+    		try {
+    			element= driver.findElement(By.xpath("//ul[@class='ullist']//li[.='Cash On Delivery']"));
+    		  
+    			clkOnCashOnDliverytab();
+    			Log.info("Cash on dilivery button found");
+    			Thread.sleep(3000);
+    			
+    		}catch(Exception e){
+    			
+    			gettextOutofStock();
+    			Log.info("Product is out of stock");
+    			Assert.assertTrue(ProductPurchasePage.gettext_outofStock.isDisplayed(), "Failed: Product is out of stock");
+    			Thread.sleep(3000);
+    			common.TakeScreenshots("OutofStock");
+    		}
     		
-    		Thread.sleep(3000);
+    		
+    		Log.endTestCase("Test Case End");
+    		
+    		
+    		}
+    		
+    		
     		
     		//clkonApplybtn();
     		
     		//clkOnPlaceOrderbtn();
     		//Thread.sleep(3000);
-    	}
+    	//}
     	
     	/******************************************************
     	   * @author Shalini Singh
@@ -181,7 +227,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
     	   *******************************************************/
    
     	
-    	@Test (dataProvider = "Loginbusinessuser", dataProviderClass= ProductPurchaseExcel.class, enabled= true, priority= 1)
+    	@Test (dataProvider = "Loginbusinessuser", dataProviderClass= ProductPurchaseExcel.class)
 	    public void LoginwithBussinessUser(String emailAddress, String password) throws IOException, InterruptedException{
 		
 	    common.ImplicityWait(10);
@@ -206,14 +252,16 @@ public class PlacedOrderd extends ProductPurchageMethods {
 		
         clkhomebtn();
         Thread.sleep(3000);
+        
+        common.TakeScreenshots("HomePage");
 	    
 	    Log.endTestCase("Test Case End");
     		
     	}
-    
     	
-		@Test(dataProvider= "BillingAdd",dataProviderClass= ProductPurchaseExcel.class, enabled= true, priority= 6)
-	    public void addBiillingAddress(String pin, String addressLine, String gst) throws InterruptedException{
+    	
+		@Test(dataProvider= "BillingAdd",dataProviderClass= ProductPurchaseExcel.class)
+	    public void addBiillingAddress(String pin, String addressLine, String gst) throws InterruptedException, IOException{
 			
 			common.ImplicityWait(10);
 			DOMConfigurator.configure("log.xml");
@@ -236,16 +284,69 @@ public class PlacedOrderd extends ProductPurchageMethods {
 	  		enterGST(gst);
 	  		Log.info("Enter GSTIN number : " +gst);
 	  		
+	  		common.TakeScreenshots("BillingAddressPage");
+	  		
 	  		clkOnSavebutn();
 	  		Thread.sleep(3000); 
+	  		Log.endTestCase("Test Case End");
 			
 		}
 		
+	  /******************************************************
+  	   * @author Shalini Singh
+  	   * Test Case Objective : Category wise product ordered
+  	   * @throws InterruptedException 
+  	   * Date:- 4 May 2018
+  	   * @throws IOException 
+  	    		   
+  	   *******************************************************/
 		
-		
-		
-		
+		@Test()
+		public void OrderCategoryProduct() throws InterruptedException, IOException {
+			common.ImplicityWait(20);
+			
+			DOMConfigurator.configure("log.xml");
+			Log.startTestCase("Category wise product ordered");
+			
+			
+			Log.info("clk on view all Category");
+			clkOnViewAllCategory();
+			common.ExplicityWait(10);
+			
+			Log.info("clk on Category Product Electronic");
+			clkOnElectronicCategory();
+			Thread.sleep(3000);
+			
+			
+			Log.info("Click on more button");
+			clkOnMorebtn();
+			Thread.sleep(6000);
+			
+			Log.info("clk on First sub category Product");
+			clkonFirstProduct();
+			Assert.assertTrue(ProductPurchasePage.clkon_FirstProduct.isDisplayed(), "Failed: Product not found");
+			Thread.sleep(6000);
+			
+			Log.info("clk on sub category Product");
+			clkonFirstProduct();
+	        Assert.assertTrue(ProductPurchasePage.clkon_FirstProduct.isDisplayed(), "Failed: Product not found");
+	        
+	        common.scrollup();
+    	    Thread.sleep(6000);
 	
+			
+			Log.info("Select First Product");
+			clkonSubCategoryPro();
+			common.ExplicityWait(10);
+			
+			cm.windohandler();
+			Thread.sleep(3000); 
+			
+			common.TakeScreenshots("AddtoCartPage");
+			
+			Log.endTestCase("Test Case End");
+		}
+
 		
     		
 	   

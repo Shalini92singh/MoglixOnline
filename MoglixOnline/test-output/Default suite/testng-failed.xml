@@ -3,11 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="online.appmethods.com.testing">
+      <class name="online.testcases.com.PlacedOrderd">
         <methods>
-          <include name="testapp"/>
+          <include name="AddProductIntoCart"/>
+          <include name="addBiillingAddress" invocation-numbers="0"/>
+          <include name="LoginwithBussinessUser" invocation-numbers="0"/>
+          <include name="validLogin" invocation-numbers="0"/>
+          <include name="OrderCategoryProduct"/>
+          <include name="addShippingAddress" invocation-numbers="0"/>
+          <include name="proceedOrdertoPayment"/>
+          <include name="SelectProduct"/>
+          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- online.appmethods.com.testing -->
+      </class> <!-- online.testcases.com.PlacedOrderd -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

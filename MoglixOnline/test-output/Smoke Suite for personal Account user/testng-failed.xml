@@ -8,6 +8,7 @@
     <classes>
       <class name="online.testcases.com.PlacedOrderd">
         <methods>
+          <include name="addShippingAddress" invocation-numbers="0"/>
           <include name="proceedOrdertoPayment"/>
           <include name="launchBrowser"/>
         </methods>
