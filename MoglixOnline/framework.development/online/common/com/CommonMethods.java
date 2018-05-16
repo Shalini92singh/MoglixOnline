@@ -14,6 +14,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import org.apache.commons.io.FileUtils;
@@ -93,10 +94,14 @@ public class CommonMethods extends Connectivity {
 	}
 
 	public void WelComeNote() {
-		JOptionPane.showOptionDialog(null, "Automation Script Developed By: Shalini", "WelCome",
+		JOptionPane.showOptionDialog(null, "Automation Script Developed By: Shalini", "WelCome Shalini",
 				JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, new Object[] {}, null);
-
+                
 	}
+	
+	    
+		
+
 
 	final String lexicon = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345674890";
 
@@ -211,10 +216,6 @@ public class CommonMethods extends Connectivity {
 	public void windohandler() {
 		
 		String winHandleBefore = driver.getWindowHandle();
-
-		// Perform the click operation that opens new window
-
-		// Switch to new window opened
 		for(String winHandle : driver.getWindowHandles()){
 		    driver.switchTo().window(winHandle);
 		}

@@ -8,76 +8,12 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Smoke Suite for personal Account user</th></tr>
-<tr><td><a href="#t0">Signup process for personal Account</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">20,508</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Order Proceed with personal account users</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">2</td><td class="num">60,187</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">5</th><th class="num">0</th><th class="num attn">2</th><th class="num">80,695</th><th colspan="2"></th></tr>
+<tr><th colspan="7">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">47,508</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke Suite for personal Account user</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Signup process for personal Account &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">online.testcases.com.Personaluseraccount</td><td><a href="#m0">navigateOnSignupPage</a></td><td rowspan="1">1526380523939</td><td rowspan="1">6714</td></tr><tr class="passedeven"><td><a href="#m1">signupWithPersonalAccountInMoglixApp</a></td><td rowspan="1">1526380533850</td><td rowspan="1">10382</td></tr><tr class="passedeven"><td><a href="#m2">verifySingupMandatoryFields</a></td><td rowspan="1">1526380530670</td><td rowspan="1">3162</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Order Proceed with personal account users &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">online.testcases.com.PlacedOrderd</td><td><a href="#m3">addShippingAddress</a></td><td rowspan="1">1526380565239</td><td rowspan="1">29166</td></tr><tr class="failedeven"><td><a href="#m4">proceedOrdertoPayment</a></td><td rowspan="1">1526380594414</td><td rowspan="1">10049</td></tr><tr><th colspan="4">Order Proceed with personal account users &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">online.testcases.com.PlacedOrderd</td><td><a href="#m5">AddProductIntoCart</a></td><td rowspan="1">1526380548988</td><td rowspan="1">16222</td></tr><tr class="passedeven"><td><a href="#m6">SelectProduct</a></td><td rowspan="1">1526380544281</td><td rowspan="1">4703</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">online.testcases.com.RFQProcess</td><td><a href="#m0">bulkOrderQuerywithBusinessUser</a></td><td rowspan="1">1526475813764</td><td rowspan="1">34921</td></tr><tr class="passedeven"><td><a href="#m1">navigateToRFQPagewithBusinessUser</a></td><td rowspan="1">1526475801400</td><td rowspan="1">12335</td></tr></tbody>
 </table>
-<h2>Signup process for personal Account</h2><h3 id="m0">online.testcases.com.Personaluseraccount#navigateOnSignupPage</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>testpersonaluser9@yopmail.com</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">online.testcases.com.Personaluseraccount#signupWithPersonalAccountInMoglixApp</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>test@123</td><td>2352190710</td><td>personaluserdemo</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">online.testcases.com.Personaluseraccount#verifySingupMandatoryFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Order Proceed with personal account users</h2><h3 id="m3">online.testcases.com.PlacedOrderd#addShippingAddress</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>201301</td><td>Noida Sector 18</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[starts-with(@formcontrolname,&apos;postCode&apos;)]&quot;}
-  (Session info: chrome=65.0.3325.181)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:15.31Z&apos;
-System info: host: &apos;ShaliniSingh-ThinkPad-E460&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.13.0-38-generic&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: f311694becfa11778cad0fce1f2f9b0e
-*** Element info: {Using=xpath, value=//input[starts-with(@formcontrolname,&apos;postCode&apos;)]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
-	at online.appmethods.com.LoginMethods.enterPinNo(LoginMethods.java:62)
-	at online.testcases.com.PlacedOrderd.addShippingAddress(PlacedOrderd.java:156)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">online.testcases.com.PlacedOrderd#proceedOrdertoPayment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;CONTINUE&apos;)]&quot;}
-  (Session info: chrome=65.0.3325.181)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:15.31Z&apos;
-System info: host: &apos;ShaliniSingh-ThinkPad-E460&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.13.0-38-generic&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: f311694becfa11778cad0fce1f2f9b0e
-*** Element info: {Using=xpath, value=//button[contains(text(),&apos;CONTINUE&apos;)]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.click(Unknown Source)
-	at online.appmethods.com.LoginMethods.clkContinuebtn(LoginMethods.java:27)
-	at online.testcases.com.PlacedOrderd.proceedOrdertoPayment(PlacedOrderd.java:182)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">online.testcases.com.PlacedOrderd#AddProductIntoCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">online.testcases.com.PlacedOrderd#SelectProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">online.testcases.com.RFQProcess#bulkOrderQuerywithBusinessUser</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>ELECTRICALS</td><td>10</td><td>V-Gard</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">online.testcases.com.RFQProcess#navigateToRFQPagewithBusinessUser</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>BusinessUserTesting@yopmail.com</td><td>test@123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -33,41 +33,14 @@ public class PlacedOrderd extends ProductPurchageMethods {
 	    CommonMethods cm= new CommonMethods();
 	
 	
-	    @Test (dataProvider = "Login", dataProviderClass = LoginExcel.class)
-	    public void validLogin(String emailAddress, String password) throws IOException, InterruptedException{
-		
-	    common.ImplicityWait(10);
-	    
-		DOMConfigurator.configure("log.xml");
-		Log.startTestCase("Login with personal account user");
-		
-		Log.info("Enter emailAddress");
-		enterEmailAdd(emailAddress);
-		Log.info("Entred Username is: " +emailAddress);
-		
-		Log.info("Click Continue Button");
-		clkContinuebtn();
-		
-		Log.info("Enter Password");
-		enterPassword(password);
-		Log.info("Entered Password is: "+password);
-		
-		Log.info("Again Click Continue Button");
-		clkContinuebtn();
-		Thread.sleep(3000);
-		
-        clkhomebtn();
-        Thread.sleep(3000);
-	    
-        common.TakeScreenshots("LoginInAppScreen");
-	    Log.endTestCase("Test Case End");
+	   
 	    
 	   
-	}
+	
         @Test()
         public void SelectProduct() throws InterruptedException, IOException {
         	
-           common.ImplicityWait(10);
+           cm.ImplicityWait(10);
     		
     		DOMConfigurator.configure("log.xml");
     		Log.startTestCase("To Select prodcut");
@@ -79,7 +52,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
     		clkOnproductnametext();
     		Log.info("Click on product Title");
     		Thread.sleep(3000);
-    		common.TakeScreenshots("ProductNameScreen");
+    		cm.TakeScreenshots("ProductNameScreen");
     	//	common.scrolldown();
     		Log.endTestCase("Test Case End");
     	    
@@ -88,7 +61,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
        @Test()
       public void AddProductIntoCart() throws InterruptedException, IOException {
     			 
-    	    common.ImplicityWait(10);
+    	    cm.ImplicityWait(10);
     	    		
     	    DOMConfigurator.configure("log.xml");
     	    Log.startTestCase("OpenCartItam");
@@ -99,26 +72,26 @@ public class PlacedOrderd extends ProductPurchageMethods {
     	    	Log.info("Click on Add to Cart");
     	    	clkOnAddtoCartbtn();
         		//Assert.assertTrue(ProductPurchasePage.clk_CartIcon.isDisplayed(), "Failed: Element is not found");
-        		common.ExplicityWait(10);
+        		cm.ExplicityWait(10);
         		
         		Log.info("Click on Cart Icon");
         	    clkOnCartIcon();
         		Thread.sleep(3000);
      
-        	    common.scrollup();
+        	    cm.scrollup();
         	    Thread.sleep(3000);
         	
         		clkOnPlaceOrderbtn();
         		Log.info("Click on place order");
         		//common.ExplicityWait(10);
         		
-        		common.TakeScreenshots("AddCardDetailspage");
+        		cm.TakeScreenshots("AddCardDetailspage");
         		Log.endTestCase("Test Case End");
         		
     	    } else{
     	    	
     	    	Log.info("Add to Cart button not found due to product is out of stock");
-    	    	common.TakeScreenshots("outOfStockProduct");
+    	    	cm.TakeScreenshots("outOfStockProduct");
         		Thread.sleep(3000);	
         		
         		
@@ -131,7 +104,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
     	 @Test(dataProvider = "Adress",dataProviderClass= ProductPurchaseExcel.class)
     	 public void addShippingAddress(String pin, String addressLine) throws InterruptedException, IOException {
     	     			 
-    	common.ImplicityWait(10);
+    	cm.ImplicityWait(10);
 	    		
     	DOMConfigurator.configure("log.xml");
     	Log.startTestCase("Add Address");  
@@ -162,7 +135,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
   		Log.info("Enter Address Name : " +addressLine );
   		Thread.sleep(3000);
   		
-  		common.TakeScreenshots("ShippingAddressPage");	
+  		cm.TakeScreenshots("ShippingAddressPage");	
   		
   		clkOnSavebutn();
   		Thread.sleep(3000); 
@@ -181,7 +154,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
     		
     		clkContinuebtn();
     		Log.info("Click on Continue button");
-    		common.ImplicityWait(10);
+    		cm.ImplicityWait(10);
     		
     		clk_proceedtoPay();
     		Log.info("Click on proceed to payment");
@@ -200,7 +173,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
     			Log.info("Product is out of stock");
     			Assert.assertTrue(ProductPurchasePage.gettext_outofStock.isDisplayed(), "Failed: Product is out of stock");
     			Thread.sleep(3000);
-    			common.TakeScreenshots("OutofStock");
+    			cm.TakeScreenshots("OutofStock");
     		}
     		
     		
@@ -230,7 +203,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
     	@Test (dataProvider = "Loginbusinessuser", dataProviderClass= ProductPurchaseExcel.class)
 	    public void LoginwithBussinessUser(String emailAddress, String password) throws IOException, InterruptedException{
 		
-	    common.ImplicityWait(10);
+	    cm.ImplicityWait(10);
 	    
 		DOMConfigurator.configure("log.xml");
 		Log.startTestCase("Login with business account user");
@@ -253,7 +226,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
         clkhomebtn();
         Thread.sleep(3000);
         
-        common.TakeScreenshots("HomePage");
+        cm.TakeScreenshots("HomePage");
 	    
 	    Log.endTestCase("Test Case End");
     		
@@ -263,11 +236,11 @@ public class PlacedOrderd extends ProductPurchageMethods {
 		@Test(dataProvider= "BillingAdd",dataProviderClass= ProductPurchaseExcel.class)
 	    public void addBiillingAddress(String pin, String addressLine, String gst) throws InterruptedException, IOException{
 			
-			common.ImplicityWait(10);
+			cm.ImplicityWait(10);
 			DOMConfigurator.configure("log.xml");
 			Log.startTestCase("Add Billing Address");
 			
-			common.scrolldown();
+			cm.scrolldown();
 			
 			clkOnAddBillingAdd();
 			Log.info("Click on Add billing text");
@@ -284,7 +257,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
 	  		enterGST(gst);
 	  		Log.info("Enter GSTIN number : " +gst);
 	  		
-	  		common.TakeScreenshots("BillingAddressPage");
+	  		cm.TakeScreenshots("BillingAddressPage");
 	  		
 	  		clkOnSavebutn();
 	  		Thread.sleep(3000); 
@@ -303,7 +276,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
 		
 		@Test()
 		public void OrderCategoryProduct() throws InterruptedException, IOException {
-			common.ImplicityWait(20);
+			cm.ImplicityWait(20);
 			
 			DOMConfigurator.configure("log.xml");
 			Log.startTestCase("Category wise product ordered");
@@ -311,7 +284,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
 			
 			Log.info("clk on view all Category");
 			clkOnViewAllCategory();
-			common.ExplicityWait(10);
+			cm.ExplicityWait(10);
 			
 			Log.info("clk on Category Product Electronic");
 			clkOnElectronicCategory();
@@ -331,25 +304,82 @@ public class PlacedOrderd extends ProductPurchageMethods {
 			clkonFirstProduct();
 	        Assert.assertTrue(ProductPurchasePage.clkon_FirstProduct.isDisplayed(), "Failed: Product not found");
 	        
-	        common.scrollup();
+	        cm.scrollup();
     	    Thread.sleep(6000);
 	
 			
 			Log.info("Select First Product");
 			clkonSubCategoryPro();
-			common.ExplicityWait(10);
+			cm.ExplicityWait(10);
 			
 			cm.windohandler();
 			Thread.sleep(3000); 
 			
-			common.TakeScreenshots("AddtoCartPage");
+			cm.TakeScreenshots("AddtoCartPage");
 			
 			Log.endTestCase("Test Case End");
 		}
-
 		
+		 @Test (dataProvider = "Login", dataProviderClass = LoginExcel.class)
+		    public void validLogin(String emailAddress, String password) throws IOException, InterruptedException{
+			
+		    cm.ImplicityWait(10);
+		    
+			DOMConfigurator.configure("log.xml");
+			Log.startTestCase("Login with Online user");
+			
+			Log.info("Enter emailAddress");
+			enterEmailAdd(emailAddress);
+			Log.info("Entred Username is: " +emailAddress);
+			
+			Log.info("Click Continue Button");
+			clkContinuebtn();
+			
+			Log.info("Enter Password");
+			enterPassword(password);
+			Log.info("Entered Password is: "+password);
+			
+			Log.info("Again Click Continue Button");
+			clkContinuebtn();
+			Thread.sleep(3000);
+			
+	        clkhomebtn();
+	        Thread.sleep(3000);
+		    
+	        cm.TakeScreenshots("LoginInAppScreen");
+		    Log.endTestCase("Test Case End");
+
+		 }
+		 
+		 @Test (dataProvider = "BusinessUser", dataProviderClass = LoginExcel.class)
+		    public void loginWithBusinessUser(String emailAddress, String password) throws IOException, InterruptedException{
+			
+		    cm.ImplicityWait(10);
+		    DOMConfigurator.configure("log.xml");
+			Log.startTestCase("Login with Online user");
+			
+			Log.info("Enter emailAddress");
+			enterEmailAdd(emailAddress);
+			Log.info("Entred Username is: " +emailAddress);
+			
+			Log.info("Click Continue Button");
+			clkContinuebtn();
+		
+			enterPassword(password);
+			Log.info("Entered Password is: "+password);
+			
+			Log.info("Again Click Continue Button");
+			clkContinuebtn();
+			Thread.sleep(3000);
+			
+	        clkhomebtn();
+	        Thread.sleep(3000);
+		    
+	        cm.TakeScreenshots("LoginInAppScreen");
+		    Log.endTestCase("Test Case End");
+		    
     		
-	   
+		 }  
    }
 	
 

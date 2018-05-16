@@ -1,5 +1,6 @@
 package online.common.com;
 
+import java.awt.ActiveEvent;
 import java.awt.Dimension;
 import java.util.concurrent.TimeUnit;
 
@@ -12,6 +13,7 @@ import org.testng.annotations.BeforeTest;
 
 import online.pom.com.LoginPage;
 import online.pom.com.ProductPurchasePage;
+import online.pom.com.RFQPage;
 import online.repository.com.Property;
 
 
@@ -28,10 +30,12 @@ public class Connectivity implements Property{
 		driver.get(webURL);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    driver.manage().window().maximize(); 
-	    
+	   // common.WelComeNote();
+	   // common.ImplicityWait(10);
+
 	    new LoginPage(driver);
 	    new ProductPurchasePage(driver);
-	    //common.WelComeNote();
+	    new RFQPage(driver);
 	    
 	}
 }
