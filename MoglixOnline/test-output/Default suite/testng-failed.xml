@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="online.testcases.com.RFQProcess">
+      <class name="online.testcases.com.RequestQuoteProcess">
         <methods>
-          <include name="bulkOrderQuerywithBusinessUser" invocation-numbers="0"/>
-          <include name="navigateToRFQPagewithBusinessUser"/>
+          <include name="ApplyBulkOrderRequestForm" invocation-numbers="0"/>
+          <include name="NavigatedToRFQPage"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- online.testcases.com.RFQProcess -->
+      </class> <!-- online.testcases.com.RequestQuoteProcess -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

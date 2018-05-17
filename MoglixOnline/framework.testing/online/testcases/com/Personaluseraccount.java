@@ -123,6 +123,32 @@ import online.utility.com.LoginExcel;
 		    Log.endTestCase("Test Case End");
 	  }
 	  
+	  @Test()
+	  public void LogoutfromApplication() throws InterruptedException {
+		  
+		  common.ImplicityWait(20);
+			
+			DOMConfigurator.configure("log.xml");
+			Log.startTestCase("Log Out From Application");
+			
+			Log.info("Click on User Profile");
+			clkOnUserprofile();
+			Thread.sleep(6000);
+			
+			Log.info("Click on Logout Option");
+			clkOnLogOut();
+			Thread.sleep(6000);
+			
+			Log.info("Click on Login Option");
+			clkOnLogin();
+			Thread.sleep(6000);
+			
+			Log.endTestCase("Test Case End");
+			
+		  
+		  
+	  }
+	  
    }
 	  
 	 

@@ -91,7 +91,8 @@ public class PlacedOrderd extends ProductPurchageMethods {
     	    } else{
     	    	
     	    	Log.info("Add to Cart button not found due to product is out of stock");
-    	    	cm.TakeScreenshots("outOfStockProduct");
+    	    	cm.TakeScreenshots("ProductOutOfStock");
+
         		Thread.sleep(3000);	
         		
         		

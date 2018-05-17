@@ -17,13 +17,13 @@ public class RFQPage extends LoginPage {
 	@FindBy(id="prod_detail")
 	public static WebElement enter_productDetails_txt;
 	
-	@FindBy(id="prod_qty")
+	@FindBy(xpath="//input[contains(@formcontrolname,'quantity')]")
 	public static WebElement enter_ProdQty_txt;
 	
 	@FindBy(xpath="//input[contains(@placeholder,'Brand*')]")
 	public static WebElement enter_BrandName_txt;
 	
-	@FindBy(xpath="//span[contains(@class,'checkbox b-text')]")
+	@FindBy(xpath="//span[contains(@class,'checkbox')]")
 	public static WebElement sel_businessUser_chkbox;
 	
 	@FindBy(xpath="//input[contains(@placeholder,'First Name*')]")
@@ -35,7 +35,7 @@ public class RFQPage extends LoginPage {
 	@FindBy(xpath="//input[contains(@placeholder,'Email*')]")
 	public static WebElement enter_mailAddress_txt;
 	
-	@FindBy(xpath="//button[contains(text(),'Submit RFQ')]")
+	@FindBy(xpath="//button[contains(@type,'submit RFQ')]")
 	public static WebElement clkOn_SubmitRFQ_btn;
 	
 	@FindBy(xpath="//select[contains(@formcontrolname,'buyertype')]")
@@ -47,6 +47,7 @@ public class RFQPage extends LoginPage {
 	@FindBy(xpath="//input[contains(@formcontrolname,'companyname')]")
 	public static WebElement txt_companyName;
 	
-	
+	@FindBy(xpath="//button[contains(text(),'Get Quote')]")
+	public static WebElement clkOn_GetQuote_btn;
 	
 }

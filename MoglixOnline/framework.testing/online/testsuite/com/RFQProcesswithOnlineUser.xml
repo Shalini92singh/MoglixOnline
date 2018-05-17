@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite for RFQ Process">
+<listeners>
+<listener class-name="online.utility.com.CustomReporter"/>
+</listeners>
+<test name="Bulk Order Query with Online user">
+<classes>
+<class name="online.testcases.com.RFQProcess">
+<methods>
+<include name="navigateToRFQPage"></include>
+<include name="bulkOrderQuerywithOnlineUser"></include>
+</methods>
+</class>
+</classes>
+</test>
+</suite>

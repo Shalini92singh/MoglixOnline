@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite for Request Quote">
+<listeners>
+      <listener class-name="online.utility.com.CustomReporter" />
+  </listeners>
+<test name="Login into the application and Select product">
+<classes>
+<class name="online.testcases.com.PlacedOrderd">
+<methods>
+<include name="validLogin"></include>
+<include name="SelectProduct"></include>
+</methods>
+</class>
+</classes>
+</test>
+<test name="Request for Quotation">
+<classes>
+<class name="online.testcases.com.RequestQuoteProcess">
+<methods>
+<include name="NavigatedToRFQPage"></include>
+<include name="ApplyBulkOrderRequestForm"></include>
+</methods>
+</class>
+</classes>
+</test>
+</suite>

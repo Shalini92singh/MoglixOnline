@@ -143,5 +143,8 @@ public abstract class ProductPurchageMethods extends LoginMethods{
 	public void clkOnElectronicCategory() {
 		ProductPurchasePage.clk_electronic_cat.click();
 	}
-
+   
+	public void clkOnRequestQuoteBtn() {
+		ProductPurchasePage.clkOn_RequestQuoteNow_btn.click();
+	}
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.support.ui.Select;
 import online.pom.com.RFQPage;
 import online.utility.com.Log;
 
-public abstract class RFQMethods extends LoginMethods{
+public abstract class RFQMethods extends ProductPurchageMethods{
 	
 	
 	
@@ -69,6 +69,10 @@ public abstract class RFQMethods extends LoginMethods{
 		String companyName= RFQPage.txt_companyName.getAttribute("value");
 		System.out.println("Company Name is: " +companyName);
 		Log.info("Get Company Name: " +companyName);
+	}
+	
+	public void clkOnQuoteBtn() {
+		RFQPage.clkOn_GetQuote_btn.click();
 	}
 	
 	

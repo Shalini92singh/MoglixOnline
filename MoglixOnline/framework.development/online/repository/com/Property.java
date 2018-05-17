@@ -14,5 +14,6 @@ public interface Property {
 	String chromePath ="//home//moglix//Desktop//SeleniumDriver//chromedriver";	// lonch web driver
 	String TestSheet ="//home//moglix//Desktop//SeleniumDriver//TestData1.xls"; //to connect excel sheet
 	Personaluseraccount login = new Personaluseraccount();
+	
 }
 

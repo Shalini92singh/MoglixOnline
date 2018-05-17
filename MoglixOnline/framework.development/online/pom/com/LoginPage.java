@@ -69,12 +69,20 @@ public class LoginPage  {
 		@FindBy(xpath= "//img[starts-with(@alt,'Shop for Assortment')]")
 		public static WebElement clk_moglixHome_icon;        
 		
+		@FindBy(xpath="html/body/app/main/pages/ba-page-top/div[1]/header/div[2]/div[4]/ul/li[3]/a/span[2]")
+		public static WebElement clk_UserProfile_icon;
+		
+		@FindBy(xpath="html/body/app/main/pages/ba-page-top/div[1]/header/div[2]/div[4]/ul/li[3]/div/ul/li[4]/span[2]")
+		public static WebElement clk_Logout_icon;
+		
+		@FindBy(xpath="//span[contains(text(),'Login')]")
+		public static WebElement clk_Login_icon;
 		
 		
 		
 		 
 		
-	
+	       
 		
 			
 		

@@ -27,9 +27,12 @@ public class testing {
 			 
 		
 		      
-		      driver.get("https://moglix.com//login");
+		      driver.get("https://moglix.com");
 		      
-		      driver.manage().window().maximize(); 
+		      driver.manage().window().maximize();
+		      
+		      Thread.sleep(6000);
+		      /*
 		      
 		      driver.findElement(By.xpath("//input[starts-with(@formcontrolname,'email')]")).sendKeys("test1@yopmail.com");
 		      
@@ -89,7 +92,7 @@ public class testing {
 		      Thread.sleep(3000); 
 		      */
 		      
-		     
+		     /*
 		      
 		      driver.findElement(By.xpath("//button[contains(text(),'Apply')]")).click();
 		     
@@ -119,6 +122,15 @@ public class testing {
 	  //a[contains(text(),'Safety Signs & Signals')]
 	    
 	  //h4[contains(text(),'Hitachi 12V Cordless Driver Drill, DS12DVF3')]*/
+		      
+		     JavascriptExecutor jse = (JavascriptExecutor) driver;
+		  	//Scroll vertically downward by 250 pixels
+		  	jse.executeScript("window.scrollBy(0,3600)", "");
+		  	Thread.sleep(3000);
+		  	
+		  	
+		  	driver.findElement(By.linkText("Online Assist")).click();
+		  	Thread.sleep(9000);
 
 	}
 

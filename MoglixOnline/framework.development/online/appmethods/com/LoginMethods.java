@@ -2,6 +2,10 @@ package online.appmethods.com;
 
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import online.common.com.Connectivity;
@@ -96,6 +100,24 @@ public abstract class LoginMethods extends Connectivity {
 	
 	public void clkCreateBussinessAc() {
 		LoginPage.clk_CreatebusinessAccount_btn.click();
+	}
+	
+	public static void clkOnUserprofile() throws InterruptedException {
+		
+		Actions action = new Actions(driver);
+		WebElement mainMenu = driver.findElement(By.xpath("html/body/app/main/pages/ba-page-top/div[1]/header/div[2]/div[4]/ul/li[3]/a/span[2]"));
+		action.moveToElement(mainMenu).moveToElement(driver.findElement(By.xpath("html/body/app/main/pages/ba-page-top/div[1]/header/div[2]/div[4]/ul/li[3]/div/ul/li[4]/span[2]"))).click().build().perform();
+		// LoginPage.clk_UserProfile_icon.click();
+	}
+	
+	public void clkOnLogOut() throws InterruptedException {
+		LoginPage.clk_Logout_icon.click();
+		Thread.sleep(3000);
+
+	}
+	
+	public void clkOnLogin() {
+		LoginPage.clk_Login_icon.click();
 	}
 	
 	

@@ -30,7 +30,7 @@ public class RFQProcess extends RFQMethods{
 	 *******************************************************/
 	
 	
-	@Test(dataProvider = "Login", dataProviderClass = LoginExcel.class,enabled= false, priority= 1 )
+	@Test(dataProvider = "Login", dataProviderClass = LoginExcel.class)
 	
 	public void navigateToRFQPage(String username, String password) throws IOException, InterruptedException{
 		
@@ -52,7 +52,7 @@ public class RFQProcess extends RFQMethods{
 		
 	}
 	
-	@Test(dependsOnMethods= "navigateToRFQPage",dataProvider = "RFQ", dataProviderClass = RFQExcel.class, enabled= false, priority= 2 )
+	@Test(dependsOnMethods= "navigateToRFQPage",dataProvider = "RFQ", dataProviderClass = RFQExcel.class)
 	
 	public void bulkOrderQuerywithOnlineUser(String proCatgory, String proQty, String brandName ) throws IOException, InterruptedException {
 		
@@ -85,34 +85,10 @@ public class RFQProcess extends RFQMethods{
 		getMbileNo();
 		Thread.sleep(3000);
 		
-	/*	
-		Log.info("Check business user check box");
-		Assert.assertFalse(RFQPage.sel_businessUser_chkbox.isSelected(),
-				"Failed: Select Already found Checked..");
-		selBusinessUserchkbox();
-		Thread.sleep(3000);
-		
-		enterFullName(fullName);
-		Log.info("Full Name is: " +fullName);
-		Thread.sleep(3000);
-		
-		enterEmailAddress(emailAddress);
-		Log.info("Email Address is: " +emailAddress);
-		Thread.sleep(3000);
-		
-		enterMbileNo(mobileNo);
-		Log.info("Phone Number is: " +mobileNo);
-		Thread.sleep(3000);
-		
-		cm.TakeScreenshots("RFQPageData");
-		
-		cm.scrolldown();
-		Thread.sleep(3000);
-		*/
-		
 		clkOnSubmitRFQ();
+		Thread.sleep(6000);
 		Log.endTestCase("Test Case End");
-		
+		  
 		
 	}
 	
@@ -124,7 +100,7 @@ public class RFQProcess extends RFQMethods{
 	 * @throws IOException 
 	   
 	 *******************************************************/
-   @Test(dataProvider = "BusinessUser", dataProviderClass = LoginExcel.class,enabled= true, priority=1)
+   @Test(dataProvider = "BusinessUser", dataProviderClass = LoginExcel.class)
 	
 	public void navigateToRFQPagewithBusinessUser(String username, String password) throws IOException, InterruptedException{
 		
@@ -148,7 +124,7 @@ public class RFQProcess extends RFQMethods{
 	}
 	
    
-   @Test(dependsOnMethods= "navigateToRFQPagewithBusinessUser",dataProvider = "RFQ", dataProviderClass = RFQExcel.class, enabled= true, priority= 2  )
+   @Test(dependsOnMethods= "navigateToRFQPagewithBusinessUser",dataProvider = "RFQ", dataProviderClass = RFQExcel.class)
 	
 	public void bulkOrderQuerywithBusinessUser(String proCatgory, String proQty, String brandName) throws IOException, InterruptedException {
 		
@@ -203,15 +179,12 @@ public class RFQProcess extends RFQMethods{
 		cm.scrolldown();
 		Thread.sleep(3000);
 		
-	//	clkOnSubmitRFQ();
+		clkOnSubmitRFQ();
+		Thread.sleep(3000);
 		Log.endTestCase("Test Case End");
 	
    }
-	
 }
-
-
-
 
 
 

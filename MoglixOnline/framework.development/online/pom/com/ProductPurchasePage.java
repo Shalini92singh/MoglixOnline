@@ -84,8 +84,9 @@ public class ProductPurchasePage extends LoginPage {
 	@FindBy(xpath="//product-list[contains(@class,'block mar-t-10')]/div/div[1]")
 	public static WebElement clkOn_subCategoryProduct;
 	
-	
-	
+	@FindBy(xpath="//button[contains(text(),'Request Quote Now')]")
+	public static WebElement clkOn_RequestQuoteNow_btn;
+
 	
 	
 	
