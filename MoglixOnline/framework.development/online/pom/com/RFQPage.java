@@ -35,7 +35,7 @@ public class RFQPage extends LoginPage {
 	@FindBy(xpath="//input[contains(@placeholder,'Email*')]")
 	public static WebElement enter_mailAddress_txt;
 	
-	@FindBy(xpath="//button[contains(@type,'submit RFQ')]")
+	@FindBy(xpath="//button[contains(text(),'Submit RFQ')]")
 	public static WebElement clkOn_SubmitRFQ_btn;
 	
 	@FindBy(xpath="//select[contains(@formcontrolname,'buyertype')]")

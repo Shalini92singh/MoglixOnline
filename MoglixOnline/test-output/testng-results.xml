@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="7" total="11" passed="4">
+<testng-results skipped="0" failed="0" ignored="8" total="17" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Smoke Suite for Request Quote" duration-ms="60318" started-at="2018-05-17T13:08:40Z" finished-at="2018-05-17T13:09:41Z">
+  <suite name="RFQProcessWithBusinessUser" duration-ms="48705" started-at="2018-05-18T12:07:16Z" finished-at="2018-05-18T12:08:04Z">
     <groups>
     </groups>
-    <test name="Login into the application and Select product" duration-ms="21711" started-at="2018-05-17T13:08:40Z" finished-at="2018-05-17T13:09:02Z">
+    <test name="Bulk Order query with Business User" duration-ms="48705" started-at="2018-05-18T12:07:16Z" finished-at="2018-05-18T12:08:04Z">
+      <class name="online.testcases.com.RFQProcess">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:online.testcases.com.RFQProcess@32eebfca]" name="launchBrowser" is-config="true" duration-ms="11729" started-at="2018-05-18T12:07:04Z" finished-at="2018-05-18T12:07:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="navigateToRFQPagewithBusinessUser(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.RFQProcess@32eebfca]" name="navigateToRFQPagewithBusinessUser" duration-ms="11127" started-at="2018-05-18T12:07:16Z" data-provider="BusinessUser" finished-at="2018-05-18T12:07:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[BusinessUserTesting@yopmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToRFQPagewithBusinessUser -->
+        <test-method status="PASS" signature="bulkOrderQuerywithBusinessUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.RFQProcess@32eebfca]" name="bulkOrderQuerywithBusinessUser" duration-ms="37553" started-at="2018-05-18T12:07:27Z" data-provider="RFQ" depends-on-methods="online.testcases.com.RFQProcess.navigateToRFQPagewithBusinessUser" finished-at="2018-05-18T12:08:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ELECTRICALS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[V-Gard]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bulkOrderQuerywithBusinessUser -->
+        <test-method status="PASS" signature="sendTestingReport()[pri:0, instance:online.testcases.com.RFQProcess@32eebfca]" name="sendTestingReport" is-config="true" duration-ms="196" started-at="2018-05-18T12:08:04Z" finished-at="2018-05-18T12:08:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendTestingReport -->
+      </class> <!-- online.testcases.com.RFQProcess -->
+    </test> <!-- Bulk Order query with Business User -->
+  </suite> <!-- RFQProcessWithBusinessUser -->
+  <suite name="OrderProCategory" duration-ms="102438" started-at="2018-05-18T12:05:21Z" finished-at="2018-05-18T12:07:03Z">
+    <groups>
+    </groups>
+    <test name="Category wise Product order" duration-ms="102438" started-at="2018-05-18T12:05:21Z" finished-at="2018-05-18T12:07:03Z">
       <class name="online.testcases.com.PlacedOrderd">
-        <test-method status="PASS" signature="validLogin(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.PlacedOrderd@13c27452]" name="validLogin" duration-ms="8885" started-at="2018-05-17T13:08:41Z" data-provider="Login" finished-at="2018-05-17T13:08:50Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="launchBrowser" is-config="true" duration-ms="16949" started-at="2018-05-18T12:05:04Z" finished-at="2018-05-18T12:05:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="validLogin(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="validLogin" duration-ms="7739" started-at="2018-05-18T12:05:21Z" data-provider="Login" finished-at="2018-05-18T12:05:29Z">
           <params>
             <param index="0">
               <value>
@@ -23,39 +80,96 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="SelectProduct()[pri:0, instance:online.testcases.com.PlacedOrderd@13c27452]" name="SelectProduct" duration-ms="12238" started-at="2018-05-17T13:08:50Z" finished-at="2018-05-17T13:09:02Z">
+        <test-method status="PASS" signature="OrderCategoryProduct()[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="OrderCategoryProduct" duration-ms="44513" started-at="2018-05-18T12:05:29Z" finished-at="2018-05-18T12:06:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectProduct -->
-      </class> <!-- online.testcases.com.PlacedOrderd -->
-    </test> <!-- Login into the application and Select product -->
-    <test name="Request for Quotation" duration-ms="38490" started-at="2018-05-17T13:09:02Z" finished-at="2018-05-17T13:09:41Z">
-      <class name="online.testcases.com.RequestQuoteProcess">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:online.testcases.com.RequestQuoteProcess@569cfc36]" name="launchBrowser" is-config="true" duration-ms="46859" started-at="2018-05-17T13:07:53Z" finished-at="2018-05-17T13:08:40Z">
+        </test-method> <!-- OrderCategoryProduct -->
+        <test-method status="PASS" signature="AddProductIntoCart()[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="AddProductIntoCart" duration-ms="15489" started-at="2018-05-18T12:06:13Z" finished-at="2018-05-18T12:06:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="NavigatedToRFQPage()[pri:0, instance:online.testcases.com.RequestQuoteProcess@569cfc36]" name="NavigatedToRFQPage" duration-ms="22425" started-at="2018-05-17T13:09:02Z" finished-at="2018-05-17T13:09:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NavigatedToRFQPage -->
-        <test-method status="PASS" signature="ApplyBulkOrderRequestForm(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.RequestQuoteProcess@569cfc36]" name="ApplyBulkOrderRequestForm" duration-ms="15890" started-at="2018-05-17T13:09:25Z" data-provider="Quote" finished-at="2018-05-17T13:09:41Z">
+        </test-method> <!-- AddProductIntoCart -->
+        <test-method status="PASS" signature="addShippingAddress(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="addShippingAddress" duration-ms="21702" started-at="2018-05-18T12:06:29Z" data-provider="Adress" finished-at="2018-05-18T12:06:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[201301]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[ABCDS1234Y]]>
+                <![CDATA[Noida Sector 18]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ApplyBulkOrderRequestForm -->
-      </class> <!-- online.testcases.com.RequestQuoteProcess -->
-    </test> <!-- Request for Quotation -->
-  </suite> <!-- Smoke Suite for Request Quote -->
+        </test-method> <!-- addShippingAddress -->
+        <test-method status="PASS" signature="proceedOrdertoPayment()[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="proceedOrdertoPayment" duration-ms="12761" started-at="2018-05-18T12:06:51Z" finished-at="2018-05-18T12:07:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- proceedOrdertoPayment -->
+        <test-method status="PASS" signature="sendTestingReport()[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="sendTestingReport" is-config="true" duration-ms="491" started-at="2018-05-18T12:07:03Z" finished-at="2018-05-18T12:07:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendTestingReport -->
+      </class> <!-- online.testcases.com.PlacedOrderd -->
+    </test> <!-- Category wise Product order -->
+  </suite> <!-- OrderProCategory -->
+  <suite name="Smoke suite" duration-ms="0" started-at="2018-05-18T12:09:00Z" finished-at="2018-05-18T12:09:00Z">
+    <groups>
+    </groups>
+  </suite> <!-- Smoke suite -->
+  <suite name="RFQProcesswithOnlineUser" duration-ms="39158" started-at="2018-05-18T12:08:20Z" finished-at="2018-05-18T12:09:00Z">
+    <groups>
+    </groups>
+    <test name="Bulk Order Query with Online user" duration-ms="39158" started-at="2018-05-18T12:08:20Z" finished-at="2018-05-18T12:09:00Z">
+      <class name="online.testcases.com.RFQProcess">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:online.testcases.com.RFQProcess@2a70a3d8]" name="launchBrowser" is-config="true" duration-ms="15798" started-at="2018-05-18T12:08:05Z" finished-at="2018-05-18T12:08:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="navigateToRFQPage(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.RFQProcess@2a70a3d8]" name="navigateToRFQPage" duration-ms="11324" started-at="2018-05-18T12:08:20Z" data-provider="Login" finished-at="2018-05-18T12:08:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test1@yopmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToRFQPage -->
+        <test-method status="PASS" signature="bulkOrderQuerywithOnlineUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.RFQProcess@2a70a3d8]" name="bulkOrderQuerywithOnlineUser" duration-ms="27811" started-at="2018-05-18T12:08:32Z" data-provider="RFQ" depends-on-methods="online.testcases.com.RFQProcess.navigateToRFQPage" finished-at="2018-05-18T12:09:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ELECTRICALS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[V-Gard]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bulkOrderQuerywithOnlineUser -->
+        <test-method status="PASS" signature="sendTestingReport()[pri:0, instance:online.testcases.com.RFQProcess@2a70a3d8]" name="sendTestingReport" is-config="true" duration-ms="190" started-at="2018-05-18T12:09:00Z" finished-at="2018-05-18T12:09:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendTestingReport -->
+      </class> <!-- online.testcases.com.RFQProcess -->
+    </test> <!-- Bulk Order Query with Online user -->
+  </suite> <!-- RFQProcesswithOnlineUser -->
 </testng-results>

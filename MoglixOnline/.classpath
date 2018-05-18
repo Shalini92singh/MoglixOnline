@@ -37,5 +37,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="/home/moglix/Desktop/SeleniumDriver/xml.jar"/>
+	<classpathentry kind="lib" path="/home/moglix/Desktop/SeleniumDriver/javax.mail.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

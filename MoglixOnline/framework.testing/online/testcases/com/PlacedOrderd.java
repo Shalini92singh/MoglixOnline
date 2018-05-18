@@ -72,7 +72,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
     	    	Log.info("Click on Add to Cart");
     	    	clkOnAddtoCartbtn();
         		//Assert.assertTrue(ProductPurchasePage.clk_CartIcon.isDisplayed(), "Failed: Element is not found");
-        		cm.ExplicityWait(10);
+    	    	 Thread.sleep(6000);
         		
         		Log.info("Click on Cart Icon");
         	    clkOnCartIcon();
@@ -92,6 +92,11 @@ public class PlacedOrderd extends ProductPurchageMethods {
     	    	
     	    	Log.info("Add to Cart button not found due to product is out of stock");
     	    	cm.TakeScreenshots("ProductOutOfStock");
+                Thread.sleep(6000);
+       	        clkOnRequestQuoteBtn();
+       	        Log.info("Request Quote Now button is found");
+           		Thread.sleep(3000);
+           		cm.TakeScreenshots("QuotationPage");
 
         		Thread.sleep(3000);	
         		
@@ -285,7 +290,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
 			
 			Log.info("clk on view all Category");
 			clkOnViewAllCategory();
-			cm.ExplicityWait(10);
+			Thread.sleep(6000);
 			
 			Log.info("clk on Category Product Electronic");
 			clkOnElectronicCategory();

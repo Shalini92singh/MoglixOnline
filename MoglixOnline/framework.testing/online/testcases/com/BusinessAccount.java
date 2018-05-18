@@ -175,12 +175,15 @@ public class BusinessAccount extends LoginMethods{
 	     
 	    
 	  }
+	  
+	  
  
 	/***********************************************
 	 * @author Shalini Singh
 	 * Test Case Objective : Login with existing user
 	   
 	 ************************************************/
+	  /*
 	@Test (dataProvider = "Login", dataProviderClass = LoginExcel.class, enabled= true)
 	public void validLogin(String emailAddress, String password) throws IOException, InterruptedException{
 		
@@ -196,14 +199,15 @@ public class BusinessAccount extends LoginMethods{
 		clkContinuebtn();
 		
 		Log.info("Enter Password");
-		enterPassword(password);
+		enterPassword(password); 
 		Log.info("Entered Password is: "+password);
 		
 		Log.info("Again Click Continue Button");
 		clkContinuebtn();
 		
 		
-	}
+		
+	} */
 }
 
 

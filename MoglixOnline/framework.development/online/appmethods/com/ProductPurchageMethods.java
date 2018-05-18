@@ -108,7 +108,7 @@ public abstract class ProductPurchageMethods extends LoginMethods{
 		Thread.sleep(3000);*/
 		
 		Actions action = new Actions(driver);
-        action.moveToElement(driver.findElement(By.xpath("//a[contains(@class,'dropdown-toggle text-red block lh-25')]"))).doubleClick().build().perform();
+        action.moveToElement(driver.findElement(By.linkText("View All Categories >>"))).doubleClick().build().perform();
         try{
             Thread.sleep(10000);
         }
