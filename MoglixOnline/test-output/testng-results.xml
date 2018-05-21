@@ -1,175 +1,516 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="8" total="17" passed="9">
+<testng-results skipped="4" failed="0" ignored="7" total="11" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="RFQProcessWithBusinessUser" duration-ms="48705" started-at="2018-05-18T12:07:16Z" finished-at="2018-05-18T12:08:04Z">
+  <suite name="RequestforQuoteProcess" duration-ms="37" started-at="2018-05-21T08:00:17Z" finished-at="2018-05-21T08:00:17Z">
     <groups>
     </groups>
-    <test name="Bulk Order query with Business User" duration-ms="48705" started-at="2018-05-18T12:07:16Z" finished-at="2018-05-18T12:08:04Z">
-      <class name="online.testcases.com.RFQProcess">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:online.testcases.com.RFQProcess@32eebfca]" name="launchBrowser" is-config="true" duration-ms="11729" started-at="2018-05-18T12:07:04Z" finished-at="2018-05-18T12:07:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="navigateToRFQPagewithBusinessUser(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.RFQProcess@32eebfca]" name="navigateToRFQPagewithBusinessUser" duration-ms="11127" started-at="2018-05-18T12:07:16Z" data-provider="BusinessUser" finished-at="2018-05-18T12:07:27Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[BusinessUserTesting@yopmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToRFQPagewithBusinessUser -->
-        <test-method status="PASS" signature="bulkOrderQuerywithBusinessUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.RFQProcess@32eebfca]" name="bulkOrderQuerywithBusinessUser" duration-ms="37553" started-at="2018-05-18T12:07:27Z" data-provider="RFQ" depends-on-methods="online.testcases.com.RFQProcess.navigateToRFQPagewithBusinessUser" finished-at="2018-05-18T12:08:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ELECTRICALS]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[V-Gard]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bulkOrderQuerywithBusinessUser -->
-        <test-method status="PASS" signature="sendTestingReport()[pri:0, instance:online.testcases.com.RFQProcess@32eebfca]" name="sendTestingReport" is-config="true" duration-ms="196" started-at="2018-05-18T12:08:04Z" finished-at="2018-05-18T12:08:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sendTestingReport -->
-      </class> <!-- online.testcases.com.RFQProcess -->
-    </test> <!-- Bulk Order query with Business User -->
-  </suite> <!-- RFQProcessWithBusinessUser -->
-  <suite name="OrderProCategory" duration-ms="102438" started-at="2018-05-18T12:05:21Z" finished-at="2018-05-18T12:07:03Z">
-    <groups>
-    </groups>
-    <test name="Category wise Product order" duration-ms="102438" started-at="2018-05-18T12:05:21Z" finished-at="2018-05-18T12:07:03Z">
+    <test name="Login into the application and Select product" duration-ms="23" started-at="2018-05-21T08:00:17Z" finished-at="2018-05-21T08:00:17Z">
       <class name="online.testcases.com.PlacedOrderd">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="launchBrowser" is-config="true" duration-ms="16949" started-at="2018-05-18T12:05:04Z" finished-at="2018-05-18T12:05:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="validLogin(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="validLogin" duration-ms="7739" started-at="2018-05-18T12:05:21Z" data-provider="Login" finished-at="2018-05-18T12:05:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test1@yopmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@123]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="validLogin(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.PlacedOrderd@5249cf5f]" name="validLogin" duration-ms="0" started-at="2018-05-21T08:00:17Z" data-provider="Login" finished-at="2018-05-21T08:00:17Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
+System info: host: 'ShaliniSingh-ThinkPad-E460', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 2f001324fe4de4213819edd47823cd8e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
+System info: host: 'ShaliniSingh-ThinkPad-E460', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 2f001324fe4de4213819edd47823cd8e
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
+at online.common.com.Connectivity.launchBrowser(Connectivity.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at online.common.com.Scripts$2.actionPerformed(Scripts.java:125)
+at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+at java.awt.Component.processMouseEvent(Component.java:6533)
+at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+at java.awt.Component.processEvent(Component.java:6298)
+at java.awt.Container.processEvent(Container.java:2237)
+at java.awt.Component.dispatchEventImpl(Component.java:4889)
+at java.awt.Container.dispatchEventImpl(Container.java:2295)
+at java.awt.Component.dispatchEvent(Component.java:4711)
+at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4889)
+at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4526)
+at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4467)
+at java.awt.Container.dispatchEventImpl(Container.java:2281)
+at java.awt.Window.dispatchEventImpl(Window.java:2746)
+at java.awt.Component.dispatchEvent(Component.java:4711)
+at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+at java.awt.EventQueue.access$500(EventQueue.java:97)
+at java.awt.EventQueue$3.run(EventQueue.java:709)
+at java.awt.EventQueue$3.run(EventQueue.java:703)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:90)
+at java.awt.EventQueue$4.run(EventQueue.java:731)
+at java.awt.EventQueue$4.run(EventQueue.java:729)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="OrderCategoryProduct()[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="OrderCategoryProduct" duration-ms="44513" started-at="2018-05-18T12:05:29Z" finished-at="2018-05-18T12:06:13Z">
+        <test-method status="SKIP" signature="SelectProduct()[pri:0, instance:online.testcases.com.PlacedOrderd@5249cf5f]" name="SelectProduct" duration-ms="0" started-at="2018-05-21T08:00:17Z" finished-at="2018-05-21T08:00:17Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
+System info: host: 'ShaliniSingh-ThinkPad-E460', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 2f001324fe4de4213819edd47823cd8e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
+System info: host: 'ShaliniSingh-ThinkPad-E460', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 2f001324fe4de4213819edd47823cd8e
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
+at online.common.com.Connectivity.launchBrowser(Connectivity.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at online.common.com.Scripts$2.actionPerformed(Scripts.java:125)
+at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+at java.awt.Component.processMouseEvent(Component.java:6533)
+at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+at java.awt.Component.processEvent(Component.java:6298)
+at java.awt.Container.processEvent(Container.java:2237)
+at java.awt.Component.dispatchEventImpl(Component.java:4889)
+at java.awt.Container.dispatchEventImpl(Container.java:2295)
+at java.awt.Component.dispatchEvent(Component.java:4711)
+at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4889)
+at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4526)
+at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4467)
+at java.awt.Container.dispatchEventImpl(Container.java:2281)
+at java.awt.Window.dispatchEventImpl(Window.java:2746)
+at java.awt.Component.dispatchEvent(Component.java:4711)
+at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+at java.awt.EventQueue.access$500(EventQueue.java:97)
+at java.awt.EventQueue$3.run(EventQueue.java:709)
+at java.awt.EventQueue$3.run(EventQueue.java:703)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:90)
+at java.awt.EventQueue$4.run(EventQueue.java:731)
+at java.awt.EventQueue$4.run(EventQueue.java:729)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OrderCategoryProduct -->
-        <test-method status="PASS" signature="AddProductIntoCart()[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="AddProductIntoCart" duration-ms="15489" started-at="2018-05-18T12:06:13Z" finished-at="2018-05-18T12:06:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddProductIntoCart -->
-        <test-method status="PASS" signature="addShippingAddress(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="addShippingAddress" duration-ms="21702" started-at="2018-05-18T12:06:29Z" data-provider="Adress" finished-at="2018-05-18T12:06:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[201301]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Noida Sector 18]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addShippingAddress -->
-        <test-method status="PASS" signature="proceedOrdertoPayment()[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="proceedOrdertoPayment" duration-ms="12761" started-at="2018-05-18T12:06:51Z" finished-at="2018-05-18T12:07:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- proceedOrdertoPayment -->
-        <test-method status="PASS" signature="sendTestingReport()[pri:0, instance:online.testcases.com.PlacedOrderd@3aeaafa6]" name="sendTestingReport" is-config="true" duration-ms="491" started-at="2018-05-18T12:07:03Z" finished-at="2018-05-18T12:07:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sendTestingReport -->
+        </test-method> <!-- SelectProduct -->
       </class> <!-- online.testcases.com.PlacedOrderd -->
-    </test> <!-- Category wise Product order -->
-  </suite> <!-- OrderProCategory -->
-  <suite name="Smoke suite" duration-ms="0" started-at="2018-05-18T12:09:00Z" finished-at="2018-05-18T12:09:00Z">
-    <groups>
-    </groups>
-  </suite> <!-- Smoke suite -->
-  <suite name="RFQProcesswithOnlineUser" duration-ms="39158" started-at="2018-05-18T12:08:20Z" finished-at="2018-05-18T12:09:00Z">
-    <groups>
-    </groups>
-    <test name="Bulk Order Query with Online user" duration-ms="39158" started-at="2018-05-18T12:08:20Z" finished-at="2018-05-18T12:09:00Z">
-      <class name="online.testcases.com.RFQProcess">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:online.testcases.com.RFQProcess@2a70a3d8]" name="launchBrowser" is-config="true" duration-ms="15798" started-at="2018-05-18T12:08:05Z" finished-at="2018-05-18T12:08:20Z">
+    </test> <!-- Login into the application and Select product -->
+    <test name="Request for Quotation" duration-ms="7" started-at="2018-05-21T08:00:17Z" finished-at="2018-05-21T08:00:17Z">
+      <class name="online.testcases.com.RequestQuoteProcess">
+        <test-method status="FAIL" signature="launchBrowser()[pri:0, instance:online.testcases.com.RequestQuoteProcess@4eff3b73]" name="launchBrowser" is-config="true" duration-ms="5351" started-at="2018-05-21T08:00:11Z" finished-at="2018-05-21T08:00:17Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
+System info: host: 'ShaliniSingh-ThinkPad-E460', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 2f001324fe4de4213819edd47823cd8e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
+System info: host: 'ShaliniSingh-ThinkPad-E460', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 2f001324fe4de4213819edd47823cd8e
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
+at online.common.com.Connectivity.launchBrowser(Connectivity.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at online.common.com.Scripts$2.actionPerformed(Scripts.java:125)
+at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+at java.awt.Component.processMouseEvent(Component.java:6533)
+at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+at java.awt.Component.processEvent(Component.java:6298)
+at java.awt.Container.processEvent(Container.java:2237)
+at java.awt.Component.dispatchEventImpl(Component.java:4889)
+at java.awt.Container.dispatchEventImpl(Container.java:2295)
+at java.awt.Component.dispatchEvent(Component.java:4711)
+at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4889)
+at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4526)
+at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4467)
+at java.awt.Container.dispatchEventImpl(Container.java:2281)
+at java.awt.Window.dispatchEventImpl(Window.java:2746)
+at java.awt.Component.dispatchEvent(Component.java:4711)
+at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+at java.awt.EventQueue.access$500(EventQueue.java:97)
+at java.awt.EventQueue$3.run(EventQueue.java:709)
+at java.awt.EventQueue$3.run(EventQueue.java:703)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:90)
+at java.awt.EventQueue$4.run(EventQueue.java:731)
+at java.awt.EventQueue$4.run(EventQueue.java:729)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="navigateToRFQPage(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.RFQProcess@2a70a3d8]" name="navigateToRFQPage" duration-ms="11324" started-at="2018-05-18T12:08:20Z" data-provider="Login" finished-at="2018-05-18T12:08:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test1@yopmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@123]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="NavigatedToRFQPage()[pri:0, instance:online.testcases.com.RequestQuoteProcess@4eff3b73]" name="NavigatedToRFQPage" duration-ms="0" started-at="2018-05-21T08:00:17Z" finished-at="2018-05-21T08:00:17Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
+System info: host: 'ShaliniSingh-ThinkPad-E460', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 2f001324fe4de4213819edd47823cd8e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
+System info: host: 'ShaliniSingh-ThinkPad-E460', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 2f001324fe4de4213819edd47823cd8e
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
+at online.common.com.Connectivity.launchBrowser(Connectivity.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at online.common.com.Scripts$2.actionPerformed(Scripts.java:125)
+at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+at java.awt.Component.processMouseEvent(Component.java:6533)
+at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+at java.awt.Component.processEvent(Component.java:6298)
+at java.awt.Container.processEvent(Container.java:2237)
+at java.awt.Component.dispatchEventImpl(Component.java:4889)
+at java.awt.Container.dispatchEventImpl(Container.java:2295)
+at java.awt.Component.dispatchEvent(Component.java:4711)
+at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4889)
+at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4526)
+at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4467)
+at java.awt.Container.dispatchEventImpl(Container.java:2281)
+at java.awt.Window.dispatchEventImpl(Window.java:2746)
+at java.awt.Component.dispatchEvent(Component.java:4711)
+at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+at java.awt.EventQueue.access$500(EventQueue.java:97)
+at java.awt.EventQueue$3.run(EventQueue.java:709)
+at java.awt.EventQueue$3.run(EventQueue.java:703)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:90)
+at java.awt.EventQueue$4.run(EventQueue.java:731)
+at java.awt.EventQueue$4.run(EventQueue.java:729)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateToRFQPage -->
-        <test-method status="PASS" signature="bulkOrderQuerywithOnlineUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.RFQProcess@2a70a3d8]" name="bulkOrderQuerywithOnlineUser" duration-ms="27811" started-at="2018-05-18T12:08:32Z" data-provider="RFQ" depends-on-methods="online.testcases.com.RFQProcess.navigateToRFQPage" finished-at="2018-05-18T12:09:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ELECTRICALS]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[V-Gard]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- NavigatedToRFQPage -->
+        <test-method status="SKIP" signature="ApplyBulkOrderRequestForm(java.lang.String, java.lang.String)[pri:0, instance:online.testcases.com.RequestQuoteProcess@4eff3b73]" name="ApplyBulkOrderRequestForm" duration-ms="0" started-at="2018-05-21T08:00:17Z" data-provider="Quote" finished-at="2018-05-21T08:00:17Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
+System info: host: 'ShaliniSingh-ThinkPad-E460', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 2f001324fe4de4213819edd47823cd8e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
+System info: host: 'ShaliniSingh-ThinkPad-E460', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 2f001324fe4de4213819edd47823cd8e
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
+at online.common.com.Connectivity.launchBrowser(Connectivity.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at online.common.com.Scripts$2.actionPerformed(Scripts.java:125)
+at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+at java.awt.Component.processMouseEvent(Component.java:6533)
+at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+at java.awt.Component.processEvent(Component.java:6298)
+at java.awt.Container.processEvent(Container.java:2237)
+at java.awt.Component.dispatchEventImpl(Component.java:4889)
+at java.awt.Container.dispatchEventImpl(Container.java:2295)
+at java.awt.Component.dispatchEvent(Component.java:4711)
+at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4889)
+at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4526)
+at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4467)
+at java.awt.Container.dispatchEventImpl(Container.java:2281)
+at java.awt.Window.dispatchEventImpl(Window.java:2746)
+at java.awt.Component.dispatchEvent(Component.java:4711)
+at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+at java.awt.EventQueue.access$500(EventQueue.java:97)
+at java.awt.EventQueue$3.run(EventQueue.java:709)
+at java.awt.EventQueue$3.run(EventQueue.java:703)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:90)
+at java.awt.EventQueue$4.run(EventQueue.java:731)
+at java.awt.EventQueue$4.run(EventQueue.java:729)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bulkOrderQuerywithOnlineUser -->
-        <test-method status="PASS" signature="sendTestingReport()[pri:0, instance:online.testcases.com.RFQProcess@2a70a3d8]" name="sendTestingReport" is-config="true" duration-ms="190" started-at="2018-05-18T12:09:00Z" finished-at="2018-05-18T12:09:00Z">
+        </test-method> <!-- ApplyBulkOrderRequestForm -->
+        <test-method status="SKIP" signature="sendTestingReport()[pri:0, instance:online.testcases.com.RequestQuoteProcess@4eff3b73]" name="sendTestingReport" is-config="true" duration-ms="0" started-at="2018-05-21T08:00:17Z" finished-at="2018-05-21T08:00:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendTestingReport -->
-      </class> <!-- online.testcases.com.RFQProcess -->
-    </test> <!-- Bulk Order Query with Online user -->
-  </suite> <!-- RFQProcesswithOnlineUser -->
+      </class> <!-- online.testcases.com.RequestQuoteProcess -->
+    </test> <!-- Request for Quotation -->
+  </suite> <!-- RequestforQuoteProcess -->
 </testng-results>

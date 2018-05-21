@@ -3,55 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="online.testcases.com.Personaluseraccount">
-        <methods>
-          <include name="LogoutfromApplication"/>
-          <include name="signupWithPersonalAccountInMoglixApp"/>
-          <include name="verifySingupMandatoryFields"/>
-          <include name="navigateOnSignupPage"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- online.testcases.com.Personaluseraccount -->
-      <class name="online.testcases.com.RequestQuoteProcess">
-        <methods>
-          <include name="ApplyBulkOrderRequestForm"/>
-          <include name="NavigatedToRFQPage"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- online.testcases.com.RequestQuoteProcess -->
       <class name="online.testcases.com.RFQProcess">
         <methods>
-          <include name="bulkOrderQuerywithBusinessUser"/>
+          <include name="sendTestingReport"/>
           <include name="navigateToRFQPage"/>
-          <include name="navigateToRFQPagewithBusinessUser"/>
-          <include name="bulkOrderQuerywithOnlineUser"/>
           <include name="launchBrowser"/>
         </methods>
       </class> <!-- online.testcases.com.RFQProcess -->
-      <class name="online.testcases.com.PlacedOrderd">
-        <methods>
-          <include name="AddProductIntoCart"/>
-          <include name="addBiillingAddress"/>
-          <include name="LoginwithBussinessUser"/>
-          <include name="validLogin"/>
-          <include name="OrderCategoryProduct"/>
-          <include name="addShippingAddress"/>
-          <include name="loginWithBusinessUser"/>
-          <include name="proceedOrdertoPayment"/>
-          <include name="SelectProduct"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- online.testcases.com.PlacedOrderd -->
-      <class name="online.testcases.com.BusinessAccount">
-        <methods>
-          <include name="navigateToCreateBusinessAccountPage"/>
-          <include name="signUpwithBusinessAccountInMoglixApp"/>
-          <include name="navigateOnSignupPage"/>
-          <include name="verifyMandatoryfieldBusinessAccountPage"/>
-          <include name="validLogin"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- online.testcases.com.BusinessAccount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -13,7 +13,7 @@ public class Mailconfiguration {
 
 
 	
-	public Mailconfiguration() {
+	public  Mailconfiguration() {
 
 	      // Recipient's email ID needs to be mentioned.
 	      String to = "shalini.singh@moglix.com";

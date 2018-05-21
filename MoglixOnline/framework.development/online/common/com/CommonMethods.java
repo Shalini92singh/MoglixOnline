@@ -14,6 +14,8 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -31,6 +33,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+// ww w.  j a  v a  2s  .co  m
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.Timer;
 
 import com.sun.jna.Function;
 
@@ -97,6 +107,7 @@ public class CommonMethods extends Connectivity {
 		JOptionPane.showOptionDialog(null, "Automation Script Developed By: Shalini", "WelCome Shalini",
 				JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, new Object[] {}, null);
                 
+	      
 	}
 	
 	    
@@ -220,4 +231,35 @@ public class CommonMethods extends Connectivity {
 		    driver.switchTo().window(winHandle);
 		}
 	}
-}
+	
+	public void Welcomemessage() {
+		int TIME_VISIBLE = 4000;
+	    JFrame frame1 = new JFrame();
+	    frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame1.setSize(200, 200);
+	    frame1.setLocation(100, 100);
+
+	    JButton button = new JButton("Automation Script Developed By: Shalini");
+	    frame1.getContentPane().add(button);
+
+	    button.addActionListener(e -> {
+	      JOptionPane pane = new JOptionPane("Automation Script Developed By: Shalini",
+	          JOptionPane.INFORMATION_MESSAGE);
+	      JDialog dialog = pane.createDialog(null, "WelCome Shalini");
+	      dialog.setModal(false);
+	      dialog.setVisible(true);
+
+	      new Timer(TIME_VISIBLE, new ActionListener() {
+	        @Override
+	        public void actionPerformed(ActionEvent e) {
+	          dialog.setVisible(false);
+	        }
+	      }).start();
+	    });
+
+	    frame1.setVisible(true);
+
+	  }
+	}
+	
+

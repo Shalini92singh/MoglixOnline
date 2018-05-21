@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Smoke suite">
     <suite-files>
         <suite-file path="SignUpProcessOfPersonalAccount.xml" />
         <suite-file path="SingUpProcessOfBussinessUser.xml" />
         <suite-file path="OrderProCategory.xml" />
-         <suite-file path="RequestQuoteProcess.xml" />
+         <suite-file path="RequestforQuoteProcess.xml" />
         <suite-file path="RFQProcessWithBusinessUser.xml" />
         <suite-file path="RFQProcesswithOnlineUser.xml" />
-
-    </suite-files>
+     </suite-files>
 </suite>

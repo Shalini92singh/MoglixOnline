@@ -52,7 +52,7 @@ public class RFQProcess extends RFQMethods{
 		
 	}
 	
-	@Test(dependsOnMethods= "navigateToRFQPage",dataProvider = "RFQ", dataProviderClass = RFQExcel.class)
+	@Test(dependsOnMethods= "navigateToRFQPage",dataProvider = "RFQ", dataProviderClass = RFQExcel.class, enabled= false)
 	
 	public void bulkOrderQuerywithOnlineUser(String proCatgory, String proQty, String brandName ) throws IOException, InterruptedException {
 		
@@ -100,7 +100,7 @@ public class RFQProcess extends RFQMethods{
 	 * @throws IOException 
 	   
 	 *******************************************************/
-   @Test(dataProvider = "BusinessUser", dataProviderClass = LoginExcel.class)
+   @Test(dataProvider = "BusinessUser", dataProviderClass = LoginExcel.class, enabled= false)
 	
 	public void navigateToRFQPagewithBusinessUser(String username, String password) throws IOException, InterruptedException{
 		
@@ -124,7 +124,7 @@ public class RFQProcess extends RFQMethods{
 	}
 	
    
-   @Test(dependsOnMethods= "navigateToRFQPagewithBusinessUser",dataProvider = "RFQ", dataProviderClass = RFQExcel.class)
+   @Test(dependsOnMethods= "navigateToRFQPagewithBusinessUser",dataProvider = "RFQ", dataProviderClass = RFQExcel.class,enabled= false)
 	
 	public void bulkOrderQuerywithBusinessUser(String proCatgory, String proQty, String brandName) throws IOException, InterruptedException {
 		
