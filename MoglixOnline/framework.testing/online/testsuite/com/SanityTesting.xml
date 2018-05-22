@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity Testing Suit">
+    <suite-files>
+        <suite-file path="SmokeTestingWithOnlineUser.xml" />
+        <suite-file path="SmokeTestingWithBusinessUser.xml" />
+        <suite-file path="OrderProCategory.xml" />
+         <suite-file path="RequestforQuoteProcess.xml" />
+        <suite-file path="RFQProcesswithOnlineUser.xml" />
+         <suite-file path="RFQProcessWithBusinessUser"/>
+     </suite-files>
+</suite>

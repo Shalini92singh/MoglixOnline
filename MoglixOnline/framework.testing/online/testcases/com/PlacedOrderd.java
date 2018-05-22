@@ -19,23 +19,25 @@ import online.utility.com.ProductPurchaseExcel;
 
 public class PlacedOrderd extends ProductPurchageMethods {
 	
-	/******************************************************
-	 * @author Shalini Singh
-	 * Test Case Objective : Placed Order with personal User
-	 * @throws InterruptedException 
-	 * Date:- 26 April 2018
-	 * @throws IOException 
-	   
-	 *******************************************************/
+	
 	
 	    public static WebElement element = null;
 	    
 	    CommonMethods cm= new CommonMethods();
+	    
+	    RequestQuoteProcess rp= new RequestQuoteProcess();
 	
 	
 	   
 	    
-	   
+	    /******************************************************
+		 * @author Shalini Singh
+		 * Test Case Objective : Placed Order with personal User
+		 * @throws InterruptedException 
+		 * Date:- 26 April 2018
+		 * @throws IOException 
+		   
+		 *******************************************************/
 	
         @Test()
         public void SelectProduct() throws InterruptedException, IOException {
@@ -51,8 +53,10 @@ public class PlacedOrderd extends ProductPurchageMethods {
     		
     		clkOnproductnametext();
     		Log.info("Click on product Title");
-    		Thread.sleep(3000);
+    	//	Assert.assertTrue(ProductPurchasePage.clk_productName_txt.isDisplayed(), "Failed: Product did not found");
+    		
     		cm.TakeScreenshots("ProductNameScreen");
+    		Thread.sleep(6000);
     	//	common.scrolldown();
     		Log.endTestCase("Test Case End");
     	    
@@ -61,7 +65,7 @@ public class PlacedOrderd extends ProductPurchageMethods {
        @Test()
       public void AddProductIntoCart() throws InterruptedException, IOException {
     			 
-    	    cm.ImplicityWait(10);
+    	    cm.ImplicityWait(30);
     	    		
     	    DOMConfigurator.configure("log.xml");
     	    Log.startTestCase("OpenCartItam");
@@ -89,17 +93,21 @@ public class PlacedOrderd extends ProductPurchageMethods {
         		Log.endTestCase("Test Case End");
         		
     	    } else{
-    	    	
+    	    	System.out.println("Add to Cart button did not found");
     	    	Log.info("Add to Cart button not found due to product is out of stock");
     	    	cm.TakeScreenshots("ProductOutOfStock");
                 Thread.sleep(6000);
+                
        	        clkOnRequestQuoteBtn();
        	        Log.info("Request Quote Now button is found");
            		Thread.sleep(3000);
+           		
            		cm.TakeScreenshots("QuotationPage");
-
         		Thread.sleep(3000);	
         		
+        		Log.info("Apply Bulk order query form");
+        		rp.ApplyBulkOrderRequestForm("4", "ABCDS1234Y");
+        		Thread.sleep(6000);	
         		
     	    }
     	    

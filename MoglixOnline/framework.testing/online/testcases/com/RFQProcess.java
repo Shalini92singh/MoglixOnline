@@ -20,9 +20,11 @@ public class RFQProcess extends RFQMethods{
 	
 	PlacedOrderd po= new PlacedOrderd();
 	CommonMethods cm= new CommonMethods();
+	
 	/******************************************************
 	 * @author Shalini Singh
 	 * Test Case Objective : RFQ Process for online user
+	 * from Home Page
 	 * @throws InterruptedException 
 	 * Date:-  16 May 2018
 	 * @throws IOException 
@@ -52,7 +54,7 @@ public class RFQProcess extends RFQMethods{
 		
 	}
 	
-	@Test(dependsOnMethods= "navigateToRFQPage",dataProvider = "RFQ", dataProviderClass = RFQExcel.class, enabled= false)
+	@Test(dependsOnMethods= "navigateToRFQPage",dataProvider = "RFQ", dataProviderClass = RFQExcel.class, enabled= true)
 	
 	public void bulkOrderQuerywithOnlineUser(String proCatgory, String proQty, String brandName ) throws IOException, InterruptedException {
 		
@@ -77,6 +79,7 @@ public class RFQProcess extends RFQMethods{
 		Thread.sleep(3000);
 		
 		getFullName();
+        
 		Thread.sleep(3000);
 		
 		getEmailAddress();
@@ -95,12 +98,13 @@ public class RFQProcess extends RFQMethods{
 	/******************************************************
 	 * @author Shalini Singh
 	 * Test Case Objective : RFQ Process for Business user
+	 * from home page
 	 * @throws InterruptedException 
 	 * Date:-  16 May 2018
 	 * @throws IOException 
 	   
 	 *******************************************************/
-   @Test(dataProvider = "BusinessUser", dataProviderClass = LoginExcel.class, enabled= false)
+   @Test(dataProvider = "BusinessUser", dataProviderClass = LoginExcel.class, enabled= true)
 	
 	public void navigateToRFQPagewithBusinessUser(String username, String password) throws IOException, InterruptedException{
 		
@@ -124,7 +128,7 @@ public class RFQProcess extends RFQMethods{
 	}
 	
    
-   @Test(dependsOnMethods= "navigateToRFQPagewithBusinessUser",dataProvider = "RFQ", dataProviderClass = RFQExcel.class,enabled= false)
+   @Test(dependsOnMethods= "navigateToRFQPagewithBusinessUser",dataProvider = "RFQ", dataProviderClass = RFQExcel.class,enabled= true)
 	
 	public void bulkOrderQuerywithBusinessUser(String proCatgory, String proQty, String brandName) throws IOException, InterruptedException {
 		

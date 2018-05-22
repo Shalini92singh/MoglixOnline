@@ -10,8 +10,6 @@ import javax.activation.*;
 public class Mailconfiguration {
 	
 
-
-
 	
 	public  Mailconfiguration() {
 

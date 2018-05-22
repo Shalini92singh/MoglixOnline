@@ -221,7 +221,7 @@ public class CommonMethods extends Connectivity {
 	
 	public void scrollup() {
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
-	jse.executeScript("window.scrollBy(0,250)", "");
+	jse.executeScript("window.scrollBy(0,-250)", "");
 	}
 	
 	public void windohandler() {

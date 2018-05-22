@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeTestingWithBusinessUser.xml]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeTestingWithOnlineUser]">
   <listeners>
     <listener class-name="online.utility.com.CustomReporter"/>
   </listeners>
@@ -8,7 +8,6 @@
     <classes>
       <class name="online.testcases.com.PlacedOrderd">
         <methods>
-          <include name="addBiillingAddress" invocation-numbers="0"/>
           <include name="sendTestingReport"/>
           <include name="addShippingAddress" invocation-numbers="0"/>
           <include name="proceedOrdertoPayment"/>
@@ -17,4 +16,4 @@
       </class> <!-- online.testcases.com.PlacedOrderd -->
     </classes>
   </test> <!-- Order Proceed with personal account users(failed) -->
-</suite> <!-- Failed suite [SmokeTestingWithBusinessUser.xml] -->
+</suite> <!-- Failed suite [SmokeTestingWithOnlineUser] -->

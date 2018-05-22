@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RFQProcesswithOnlineUser]">
+  <listeners>
+    <listener class-name="online.utility.com.CustomReporter"/>
+  </listeners>
+  <test thread-count="5" name="Bulk Order Query with Online user(failed)">
+    <classes>
+      <class name="online.testcases.com.RFQProcess">
+        <methods>
+          <include name="sendTestingReport"/>
+          <include name="navigateToRFQPage"/>
+          <include name="bulkOrderQuerywithOnlineUser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- online.testcases.com.RFQProcess -->
+    </classes>
+  </test> <!-- Bulk Order Query with Online user(failed) -->
+</suite> <!-- Failed suite [RFQProcesswithOnlineUser] -->

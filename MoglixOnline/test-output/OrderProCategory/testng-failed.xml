@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeTestingWithBusinessUser.xml]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [OrderProCategory]">
   <listeners>
     <listener class-name="online.utility.com.CustomReporter"/>
   </listeners>
-  <test thread-count="5" name="Order Proceed with personal account users(failed)">
+  <test thread-count="5" name="Category wise Product order(failed)">
     <classes>
       <class name="online.testcases.com.PlacedOrderd">
         <methods>
-          <include name="addBiillingAddress" invocation-numbers="0"/>
           <include name="sendTestingReport"/>
           <include name="addShippingAddress" invocation-numbers="0"/>
           <include name="proceedOrdertoPayment"/>
@@ -16,5 +15,5 @@
         </methods>
       </class> <!-- online.testcases.com.PlacedOrderd -->
     </classes>
-  </test> <!-- Order Proceed with personal account users(failed) -->
-</suite> <!-- Failed suite [SmokeTestingWithBusinessUser.xml] -->
+  </test> <!-- Category wise Product order(failed) -->
+</suite> <!-- Failed suite [OrderProCategory] -->

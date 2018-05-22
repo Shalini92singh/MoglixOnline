@@ -15,6 +15,16 @@ public class RequestQuoteProcess extends RFQMethods {
 	
 	CommonMethods cm= new CommonMethods();
 	
+	
+	/******************************************************
+	 * @author Shalini Singh
+	 * Test Case Objective : Apply RFQ From Product page
+	 * @throws InterruptedException 
+	 * Date:-  May 2018
+	 * @throws IOException 
+	   
+	 *******************************************************/
+	
 	 @Test()
      public void NavigatedToRFQPage() throws InterruptedException, IOException {
    			 
@@ -36,7 +46,7 @@ public class RequestQuoteProcess extends RFQMethods {
        		Thread.sleep(3000);
     
        	    cm.scrollup();
-       	    Thread.sleep(3000);
+       	    Thread.sleep(3000); 
        	
        		clkOnPlaceOrderbtn();
        		Log.info("Click on place order");
